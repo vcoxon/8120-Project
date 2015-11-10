@@ -1,0 +1,267 @@
+Year,State Name,SEA Education Environment,SEA Disability Category,Age 3,Age 4,Age 5,American Indian or Alaska Native Age 3 to 5 ,Asian Age 3-5 ,Black or African American Age 3-5 ,Hispanic/Latino Age 3-5 ,Native Hawaiian or Other Pacific Islander Age 3-5 ,Two or More Races Age 3-5 ,White Age 3-5 ,Female Age 3 to 5,Male Age 3 to 5,LEP Yes Age 3 to 5,LEP No Age 3 to 5,Age 3 to 5,Age 6,Age 7,Age 8,Age 9,Age 10,Age 11,Age 12,Age 13,Age 14,Age 15,Age 16,Age 17,Age 18,Age 19,Age 20,Age 21,Age 6-11,Age 12-17,Age 18-21,Ages 6-21,LEP Yes Age 6 to 21,LEP No Age 6 to 21,Female Age 6 to 21,Male Age 6 to 21,American Indian or Alaska Native Age 6 to21,Asian Age 6 to21,Black or African American Age 6 to21,Hispanic/Latino Age 6 to21,Native Hawaiian or Other Pacific Islander Age 6 to21,Two or more races Age 6 to21,White Age 6 to21
+2013,GEORGIA,Correctional Facilities,All Disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,0,0,1,0,1,15,35,87,131,64,26,18,14,2,1,333,60,394,0,394,30,364,0,0,304,12,0,3,75
+2013,GEORGIA,Home,All Disabilities,102,74,115,0,6,53,27,1,13,191,96,195,2,289,291,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Homebound/Hospital,All Disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,14,10,20,16,17,15,28,30,39,38,35,45,36,18,13,4,92,215,71,378,4,374,135,243,2,3,127,37,1,10,198
+2013,GEORGIA,Inside regular class 40% through 79% of day,All Disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1422,2061,2587,2972,2999,2994,3032,2750,2550,2368,2050,1751,1163,408,138,101,15035,14501,1810,31346,2784,28562,10129,21217,88,489,12988,4593,27,966,12195
+2013,GEORGIA,Inside regular class 80% or more of the day,All Disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,7517,8408,9094,9555,9966,10041,9779,9533,9135,8777,8190,7375,3641,897,257,118,54581,52789,4913,112283,6668,105615,36776,75507,214,1585,41947,12191,75,3473,52798
+2013,GEORGIA,Inside regular class less than 40% of day,All Disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1780,1699,1727,1718,1826,2024,1999,2096,1960,1975,1863,1658,1185,744,494,341,10774,11551,2764,25089,1060,24029,7971,17118,49,624,11587,3152,21,698,8958
+2013,GEORGIA,Other Location Regular Early Childhood Program (at least 10 Hours),All Disabilities,581,1097,1966,8,89,1084,433,2,131,1897,1095,2549,163,3481,3644,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (less than 10 Hours),All Disabilities,180,150,353,0,30,217,116,0,25,295,199,484,28,655,683,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Parentally Placed in Private Schools,All Disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,93,68,68,52,38,28,25,18,18,12,12,9,3,0,0,0,347,94,3,444,3,441,148,296,0,16,62,17,1,14,334
+2013,GEORGIA,"Residential Facility, Age 3-5",All Disabilities,0,1,0,0,0,0,0,0,0,1,1,0,0,1,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 6-21",All Disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,6,12,16,12,29,37,50,47,61,75,84,56,23,39,43,28,112,373,133,618,2,616,227,391,1,4,273,34,1,18,287
+2013,GEORGIA,Separate Class,All Disabilities,1438,1568,1193,14,137,1667,722,10,133,1516,1154,3045,97,4102,4199,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 3-5",All Disabilities,10,17,45,0,2,33,10,0,3,24,18,54,1,71,72,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 6-21",All Disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,98,107,124,147,172,206,223,271,238,233,195,171,138,92,53,39,854,1331,322,2507,19,2488,566,1941,6,27,1304,144,1,78,947
+2013,GEORGIA,Service Provider Location,All Disabilities,296,291,64,1,30,135,112,0,20,353,194,457,3,648,651,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (at least 10 Hours),All Disabilities,724,2183,4634,10,130,2927,781,2,248,3443,2237,5304,284,7257,7541,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (less than 10 Hours),All Disabilities,42,78,326,1,11,164,62,0,15,193,146,300,29,417,446,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 3-5",All Disabilities,3373,5459,8696,34,435,6280,2263,15,588,7913,5140,12388,607,16921,17528,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 6-21",All Disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,10930,12365,13636,14472,15048,15345,15137,14760,14036,13565,12560,11129,6215,2216,1012,633,81796,81187,10076,173059,10540,162519,55982,117077,360,2748,68592,20180,127,5260,75792
+2013,GEORGIA,Correctional Facilities,Autism,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,1,0,2,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Home,Autism,-,-,-,-,-,-,-,-,-,-,-,-,-,-,4,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Homebound/Hospital,Autism,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,3,15,6,24,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 40% through 79% of day,Autism,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1253,1161,189,2603,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 80% or more of the day,Autism,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,2721,2687,254,5662,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class less than 40% of day,Autism,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,2506,2127,534,5167,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (at least 10 Hours),Autism,-,-,-,-,-,-,-,-,-,-,-,-,-,-,105,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (less than 10 Hours),Autism,-,-,-,-,-,-,-,-,-,-,-,-,-,-,72,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Parentally Placed in Private Schools,Autism,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,7,7,0,14,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 3-5",Autism,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 6-21",Autism,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,5,22,19,46,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Separate Class,Autism,-,-,-,-,-,-,-,-,-,-,-,-,-,-,485,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 3-5",Autism,-,-,-,-,-,-,-,-,-,-,-,-,-,-,9,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 6-21",Autism,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,124,166,88,378,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Service Provider Location,Autism,-,-,-,-,-,-,-,-,-,-,-,-,-,-,3,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (at least 10 Hours),Autism,-,-,-,-,-,-,-,-,-,-,-,-,-,-,281,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (less than 10 Hours),Autism,-,-,-,-,-,-,-,-,-,-,-,-,-,-,35,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 3-5",Autism,-,-,-,1,45,405,109,1,44,389,-,-,-,-,994,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 6-21",Autism,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,6620,6186,1090,13896,443,13453,2092,11804,30,516,4781,1232,6,462,6869
+2013,GEORGIA,Correctional Facilities,Deaf-blindness,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Home,Deaf-blindness,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Homebound/Hospital,Deaf-blindness,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,2,0,2,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 40% through 79% of day,Deaf-blindness,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,2,1,0,3,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 80% or more of the day,Deaf-blindness,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,1,0,2,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class less than 40% of day,Deaf-blindness,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,5,3,0,8,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (at least 10 Hours),Deaf-blindness,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (less than 10 Hours),Deaf-blindness,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Parentally Placed in Private Schools,Deaf-blindness,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 3-5",Deaf-blindness,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 6-21",Deaf-blindness,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,0,2,2,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Separate Class,Deaf-blindness,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 3-5",Deaf-blindness,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 6-21",Deaf-blindness,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,2,2,1,5,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Service Provider Location,Deaf-blindness,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (at least 10 Hours),Deaf-blindness,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (less than 10 Hours),Deaf-blindness,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 3-5",Deaf-blindness,-,-,-,0,0,0,0,0,0,1,-,-,-,-,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 6-21",Deaf-blindness,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,10,9,3,22,0,22,10,12,0,1,7,1,0,0,13
+2013,GEORGIA,Correctional Facilities,Developmental delay (valid only for children ages 3-9 when defined by state),-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Home,Developmental delay (valid only for children ages 3-9 when defined by state),-,-,-,-,-,-,-,-,-,-,-,-,-,-,78,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Homebound/Hospital,Developmental delay (valid only for children ages 3-9 when defined by state),-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,17,-,-,17,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 40% through 79% of day,Developmental delay (valid only for children ages 3-9 when defined by state),-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,2912,-,-,2912,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 80% or more of the day,Developmental delay (valid only for children ages 3-9 when defined by state),-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,6741,-,-,6741,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class less than 40% of day,Developmental delay (valid only for children ages 3-9 when defined by state),-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,2828,-,-,2828,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (at least 10 Hours),Developmental delay (valid only for children ages 3-9 when defined by state),-,-,-,-,-,-,-,-,-,-,-,-,-,-,1485,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (less than 10 Hours),Developmental delay (valid only for children ages 3-9 when defined by state),-,-,-,-,-,-,-,-,-,-,-,-,-,-,418,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Parentally Placed in Private Schools,Developmental delay (valid only for children ages 3-9 when defined by state),-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,12,-,-,12,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 3-5",Developmental delay (valid only for children ages 3-9 when defined by state),-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 6-21",Developmental delay (valid only for children ages 3-9 when defined by state),-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,9,-,-,9,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Separate Class,Developmental delay (valid only for children ages 3-9 when defined by state),-,-,-,-,-,-,-,-,-,-,-,-,-,-,3316,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 3-5",Developmental delay (valid only for children ages 3-9 when defined by state),-,-,-,-,-,-,-,-,-,-,-,-,-,-,46,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 6-21",Developmental delay (valid only for children ages 3-9 when defined by state),-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,119,-,-,119,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Service Provider Location,Developmental delay (valid only for children ages 3-9 when defined by state),-,-,-,-,-,-,-,-,-,-,-,-,-,-,57,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (at least 10 Hours),Developmental delay (valid only for children ages 3-9 when defined by state),-,-,-,-,-,-,-,-,-,-,-,-,-,-,3907,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (less than 10 Hours),Developmental delay (valid only for children ages 3-9 when defined by state),-,-,-,-,-,-,-,-,-,-,-,-,-,-,226,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 3-5",Developmental delay (valid only for children ages 3-9 when defined by state),-,-,-,21,243,3850,1436,10,323,3650,-,-,-,-,9533,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 6-21",Developmental delay (valid only for children ages 3-9 when defined by state),-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,12638,-,-,12638,1282,11356,3603,9035,22,215,5220,1781,12,434,4954
+2013,GEORGIA,Correctional Facilities,Emotional disturbance,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,151,22,173,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Home,Emotional disturbance,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Homebound/Hospital,Emotional disturbance,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,37,13,51,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 40% through 79% of day,Emotional disturbance,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,672,1288,167,2127,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 80% or more of the day,Emotional disturbance,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1786,4691,511,6988,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class less than 40% of day,Emotional disturbance,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,771,1062,133,1966,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (at least 10 Hours),Emotional disturbance,-,-,-,-,-,-,-,-,-,-,-,-,-,-,14,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (less than 10 Hours),Emotional disturbance,-,-,-,-,-,-,-,-,-,-,-,-,-,-,2,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Parentally Placed in Private Schools,Emotional disturbance,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,4,0,4,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 3-5",Emotional disturbance,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 6-21",Emotional disturbance,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,42,182,6,230,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Separate Class,Emotional disturbance,-,-,-,-,-,-,-,-,-,-,-,-,-,-,16,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 3-5",Emotional disturbance,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 6-21",Emotional disturbance,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,394,827,94,1315,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Service Provider Location,Emotional disturbance,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (at least 10 Hours),Emotional disturbance,-,-,-,-,-,-,-,-,-,-,-,-,-,-,23,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (less than 10 Hours),Emotional disturbance,-,-,-,-,-,-,-,-,-,-,-,-,-,-,2,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 3-5",Emotional disturbance,-,-,-,0,0,21,4,0,5,28,-,-,-,-,58,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 6-21",Emotional disturbance,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,3666,8242,946,12854,161,12693,3242,9612,33,61,6062,687,12,517,5482
+2013,GEORGIA,Correctional Facilities,Hearing impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Home,Hearing impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Homebound/Hospital,Hearing impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,1,0,1,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 40% through 79% of day,Hearing impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,148,131,19,298,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 80% or more of the day,Hearing impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,387,545,40,972,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class less than 40% of day,Hearing impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,85,68,8,161,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (at least 10 Hours),Hearing impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,26,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (less than 10 Hours),Hearing impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,8,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Parentally Placed in Private Schools,Hearing impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,1,0,1,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 3-5",Hearing impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 6-21",Hearing impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,20,40,22,82,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Separate Class,Hearing impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,52,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 3-5",Hearing impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,7,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 6-21",Hearing impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,47,72,37,156,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Service Provider Location,Hearing impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,5,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (at least 10 Hours),Hearing impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,68,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (less than 10 Hours),Hearing impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,4,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 3-5",Hearing impairment,-,-,-,0,5,55,41,1,5,64,-,-,-,-,171,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 6-21",Hearing impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,687,858,126,1671,106,1565,767,904,1,67,617,293,2,41,650
+2013,GEORGIA,Correctional Facilities,Intellectual disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,33,12,45,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Home,Intellectual disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,2,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Homebound/Hospital,Intellectual disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,37,56,25,118,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 40% through 79% of day,Intellectual disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1073,2032,541,3646,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 80% or more of the day,Intellectual disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,935,1909,554,3398,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class less than 40% of day,Intellectual disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,2880,4819,1595,9294,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (at least 10 Hours),Intellectual disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,24,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (less than 10 Hours),Intellectual disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,40,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Parentally Placed in Private Schools,Intellectual disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,2,4,0,6,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 3-5",Intellectual disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 6-21",Intellectual disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,8,40,47,95,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Separate Class,Intellectual disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,80,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 3-5",Intellectual disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,2,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 6-21",Intellectual disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,37,94,77,208,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Service Provider Location,Intellectual disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,2,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (at least 10 Hours),Intellectual disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,49,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (less than 10 Hours),Intellectual disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,5,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 3-5",Intellectual disability,-,-,-,1,7,91,31,0,10,64,-,-,-,-,204,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 6-21",Intellectual disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,4972,8987,2851,16810,530,16280,7107,9703,32,249,9198,1564,18,334,5415
+2013,GEORGIA,Correctional Facilities,Multiple disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Home,Multiple disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Homebound/Hospital,Multiple disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 40% through 79% of day,Multiple disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 80% or more of the day,Multiple disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class less than 40% of day,Multiple disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (at least 10 Hours),Multiple disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (less than 10 Hours),Multiple disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Parentally Placed in Private Schools,Multiple disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 3-5",Multiple disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 6-21",Multiple disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Separate Class,Multiple disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 3-5",Multiple disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 6-21",Multiple disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Service Provider Location,Multiple disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (at least 10 Hours),Multiple disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (less than 10 Hours),Multiple disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 3-5",Multiple disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 6-21",Multiple disabilities,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Correctional Facilities,Orthopedic impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Home,Orthopedic impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Homebound/Hospital,Orthopedic impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,4,10,2,16,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 40% through 79% of day,Orthopedic impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,72,73,20,165,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 80% or more of the day,Orthopedic impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,204,253,30,487,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class less than 40% of day,Orthopedic impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,36,67,29,132,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (at least 10 Hours),Orthopedic impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,6,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (less than 10 Hours),Orthopedic impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,3,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Parentally Placed in Private Schools,Orthopedic impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 3-5",Orthopedic impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 6-21",Orthopedic impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Separate Class,Orthopedic impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,10,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 3-5",Orthopedic impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 6-21",Orthopedic impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Service Provider Location,Orthopedic impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (at least 10 Hours),Orthopedic impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,40,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (less than 10 Hours),Orthopedic impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,4,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 3-5",Orthopedic impairment,-,-,-,0,4,15,13,0,0,32,-,-,-,-,64,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 6-21",Orthopedic impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,316,403,81,800,62,738,330,470,4,25,212,111,2,18,428
+2013,GEORGIA,Correctional Facilities,Other health impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,59,11,70,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Home,Other health impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,15,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Homebound/Hospital,Other health impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,19,61,16,96,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 40% through 79% of day,Other health impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,2322,3000,326,5648,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 80% or more of the day,Other health impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,6851,11438,1028,19317,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class less than 40% of day,Other health impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,801,1421,226,2448,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (at least 10 Hours),Other health impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,47,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (less than 10 Hours),Other health impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,15,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Parentally Placed in Private Schools,Other health impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,3,6,1,10,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 3-5",Other health impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 6-21",Other health impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,17,43,20,80,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Separate Class,Other health impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,80,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 3-5",Other health impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 6-21",Other health impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,105,132,17,254,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Service Provider Location,Other health impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (at least 10 Hours),Other health impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,138,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (less than 10 Hours),Other health impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,13,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 3-5",Other health impairment,-,-,-,2,5,79,26,1,8,188,-,-,-,-,309,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 6-21",Other health impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,10118,16160,1645,27923,573,27350,8400,19523,55,230,9928,1740,22,942,15006
+2013,GEORGIA,Correctional Facilities,Specific learning disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,85,15,100,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Home,Specific learning disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,3,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Homebound/Hospital,Specific learning disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,4,28,7,39,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 40% through 79% of day,Specific learning disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,6102,6606,523,13231,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 80% or more of the day,Specific learning disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,15393,27940,2396,45729,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class less than 40% of day,Specific learning disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,727,1814,210,2751,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (at least 10 Hours),Specific learning disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,5,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (less than 10 Hours),Specific learning disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Parentally Placed in Private Schools,Specific learning disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,11,12,0,23,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 3-5",Specific learning disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 6-21",Specific learning disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,7,22,7,36,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Separate Class,Specific learning disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,4,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 3-5",Specific learning disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 6-21",Specific learning disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,8,24,2,34,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Service Provider Location,Specific learning disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (at least 10 Hours),Specific learning disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,24,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (less than 10 Hours),Specific learning disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,2,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 3-5",Specific learning disability,-,-,-,0,0,20,2,0,0,16,-,-,-,-,38,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 6-21",Specific learning disability,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,22252,36531,3160,61943,5327,56616,22347,39596,127,704,24940,9912,36,1653,24571
+2013,GEORGIA,Correctional Facilities,Speech or language impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,4,0,4,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Home,Speech or language impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,186,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Homebound/Hospital,Speech or language impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,4,2,0,6,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 40% through 79% of day,Speech or language impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,417,139,10,566,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 80% or more of the day,Speech or language impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,19211,2961,67,22239,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class less than 40% of day,Speech or language impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,79,75,5,159,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (at least 10 Hours),Speech or language impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1919,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (less than 10 Hours),Speech or language impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,124,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Parentally Placed in Private Schools,Speech or language impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,311,59,2,372,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 3-5",Speech or language impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 6-21",Speech or language impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,2,1,0,3,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Separate Class,Speech or language impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,138,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 3-5",Speech or language impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,5,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 6-21",Speech or language impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,8,0,0,8,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Service Provider Location,Speech or language impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,583,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (at least 10 Hours),Speech or language impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,2973,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (less than 10 Hours),Speech or language impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,146,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 3-5",Speech or language impairment,-,-,-,9,123,1719,589,2,189,3443,-,-,-,-,6074,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 6-21",Speech or language impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,20032,3241,84,23357,1996,21361,7604,15753,53,640,7199,2747,17,827,11874
+2013,GEORGIA,Correctional Facilities,Traumatic brain injury,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Home,Traumatic brain injury,-,-,-,-,-,-,-,-,-,-,-,-,-,-,2,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Homebound/Hospital,Traumatic brain injury,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,3,3,2,8,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 40% through 79% of day,Traumatic brain injury,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,26,42,10,78,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 80% or more of the day,Traumatic brain injury,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,47,105,16,168,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class less than 40% of day,Traumatic brain injury,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,42,76,21,139,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (at least 10 Hours),Traumatic brain injury,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (less than 10 Hours),Traumatic brain injury,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Parentally Placed in Private Schools,Traumatic brain injury,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 3-5",Traumatic brain injury,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 6-21",Traumatic brain injury,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,1,1,2,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Separate Class,Traumatic brain injury,-,-,-,-,-,-,-,-,-,-,-,-,-,-,4,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 3-5",Traumatic brain injury,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 6-21",Traumatic brain injury,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,3,2,2,7,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Service Provider Location,Traumatic brain injury,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (at least 10 Hours),Traumatic brain injury,-,-,-,-,-,-,-,-,-,-,-,-,-,-,6,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (less than 10 Hours),Traumatic brain injury,-,-,-,-,-,-,-,-,-,-,-,-,-,-,2,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 3-5",Traumatic brain injury,-,-,-,0,0,3,5,0,1,6,-,-,-,-,15,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 6-21",Traumatic brain injury,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,121,229,52,402,16,386,141,261,1,11,155,40,0,11,184
+2013,GEORGIA,Correctional Facilities,Visual impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Home,Visual impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Homebound/Hospital,Visual impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 40% through 79% of day,Visual impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,36,28,5,69,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class 80% or more of the day,Visual impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,304,259,17,580,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Inside regular class less than 40% of day,Visual impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,14,19,3,36,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (at least 10 Hours),Visual impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,12,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Other Location Regular Early Childhood Program (less than 10 Hours),Visual impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Parentally Placed in Private Schools,Visual impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,1,0,2,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 3-5",Visual impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Residential Facility, Age 6-21",Visual impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,2,22,9,33,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Separate Class,Visual impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,13,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 3-5",Visual impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,1,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Separate School, Age 6-21",Visual impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,7,12,4,23,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Service Provider Location,Visual impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,0,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (at least 10 Hours),Visual impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,32,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,Services Regular Early Childhood Program (less than 10 Hours),Visual impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,7,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 3-5",Visual impairment,-,-,-,0,3,22,7,0,3,32,-,-,-,-,67,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-
+2013,GEORGIA,"Total, Age 6-21",Visual impairment,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,364,341,38,743,44,699,339,404,2,29,273,72,0,21,346
