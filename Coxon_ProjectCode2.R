@@ -3,17 +3,34 @@ library(dplyr)
 library(magrittr)
 
 #### RUN THIS FIRST; THIS IS WHAT I WILL BE WORKING WITH.
+# Variables IDCENSUS, NAME, CONUM, CSA, CBSA, and NCEID are alphanumeric character strings.
+# All amounts are expressed in thousands of dollars.
+
 district.data.13 = read.table(file = "http://www2.census.gov/govs/school/elsec13t.txt", header = TRUE, sep = ",")
-my.district.data.13 <- district.data.13[c("NAME", "ENROLL", "TOTALREV", "TFEDREV", "FEDRSPEC", "STRSPEC", "STROTHR", "TLOCREV", "LOCROSCH", "TOTALEXP", "TCURINST", "TCURSSVC", "TCURSPUP", "PCTTOTAL", "PCTFTOT", "PCTSTOT", "PCTLTOT", "PCTLOTHG", "PPCSTOT", "PPITOTAL", "PPSTOTAL", "PPSPUPIL")]
+#Need to include FEDROTHR because of GNETS funding flexibility.  
+#See  http://www.rcboe.org/sandhills and https://www.gadoe.org/School-Improvement/Federal-Programs/Pages/REAP.aspx
+my.district.data.13 <- district.data.13[c("NAME", "ENROLL", "TOTALREV", "TFEDREV", "FEDRSPEC", "STRSPEC", "STROTHR", "TLOCREV", "LOCROSCH", "LOCROTHR", "TOTALEXP", "TCURINST", "TCURSSVC", "TCURSPUP", "PCTTOTAL", "PCTFTOT", "PCTSTOT", "PCTLTOT", "PCTLOTHG", "PPCSTOT", "PPITOTAL", "PPSTOTAL", "PPSPUPIL")]
 head(my.district.data.13)
-# I need to find the population parameter for spending.
+# I need to find the population parameter for several spending variables...
+summary(my.district.data.13$STRSPEC)
+summary(my.district.data.13$FEDRSPEC)
+summary(my.district.data.13$LOCROSCH)
+
+
 
 # I need all 196 observations for Georgia.
 GA.district.data.13 <- my.district.data.13 %>% slice(2199:2394)
 head(GA.district.data.13)
 tail(GA.district.data.13)
-RESA.data.13 <- GA.district.data.13 %>% filter(ENROLL=='0')
+summary(GA.district.data.13$STRSPEC)
+summary(GA.district.data.13$FEDRSPEC)
+summary(GA.district.data.13$LOCROSCH)
 
+
+RESA.data.13 <- GA.district.data.13 %>% filter(ENROLL=='0')
+NoRESA.data.13 <- GA.district.data.13 %>% filter(ENROLL!='0')
+
+# NOT SURE WHAT TO DO WITH THIS YET; MAY NOT NEED IT. KEEPING IT RIGHT NOW BECAUSE IT WAS PAINSTAKING.
 Cedarwood.Bounds.First.Dist.RESA.13 <- GA.district.data.13[c(1, 17, 24, 63, 100, 160, 167, 168, 186),]
 Coastal.Bounds.First.Dist.RESA.13 <- GA.district.data.13[c(16, 23, 77, 110, 112, 119),]
 Heartland.Bounds.Heart.GA.RESA.13 <- GA.district.data.13[c(13,53,107,108,128,142,16,171,188,193),]
