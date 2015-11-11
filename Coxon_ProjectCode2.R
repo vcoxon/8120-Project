@@ -9,11 +9,12 @@ library(magrittr)
 district.data.13 = read.table(file = "http://www2.census.gov/govs/school/elsec13t.txt", header = TRUE, sep = ",")
 #Need to include FEDROTHR because of GNETS funding flexibility.  
 #See  http://www.rcboe.org/sandhills and https://www.gadoe.org/School-Improvement/Federal-Programs/Pages/REAP.aspx
-my.district.data.13 <- district.data.13[c("NAME", "ENROLL", "TOTALREV", "TFEDREV", "FEDRSPEC", "STRSPEC", "STROTHR", "TLOCREV", "LOCROSCH", "LOCROTHR", "TOTALEXP", "TCURINST", "TCURSSVC", "TCURSPUP", "PCTTOTAL", "PCTFTOT", "PCTSTOT", "PCTLTOT", "PCTLOTHG", "PPCSTOT", "PPITOTAL", "PPSTOTAL", "PPSPUPIL")]
+my.district.data.13 <- district.data.13[c("NAME", "ENROLL", "TOTALREV", "TFEDREV", "FEDRSPEC", "FEDROTHR", "STRSPEC", "STROTHR", "TLOCREV", "LOCROSCH", "LOCROTHR", "TOTALEXP", "TCURINST", "TCURSSVC", "TCURSPUP", "PCTTOTAL", "PCTFTOT", "PCTSTOT", "PCTLTOT", "PCTLOTHG", "PPCSTOT", "PPITOTAL", "PPSTOTAL", "PPSPUPIL")]
 head(my.district.data.13)
 # I need to find the population parameter for several spending variables...
 summary(my.district.data.13$STRSPEC)
 summary(my.district.data.13$FEDRSPEC)
+summary(my.district.data.13$FEDROTHR)
 summary(my.district.data.13$LOCROSCH)
 
 
@@ -24,6 +25,7 @@ head(GA.district.data.13)
 tail(GA.district.data.13)
 summary(GA.district.data.13$STRSPEC)
 summary(GA.district.data.13$FEDRSPEC)
+summary(GA.district.data.13$FEDROTHR)
 summary(GA.district.data.13$LOCROSCH)
 
 
