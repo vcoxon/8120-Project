@@ -2,15 +2,6 @@ library(foreign)
 library(dplyr)
 library(magrittr)
 
-####NOT SURE IF I NEED THIS...WANTED TO HAVE IT JUST IN CASE I CAN'T FIND ACTUAL NUMBER OF STUDENTS IN THE DISTRICTS...
-IDEA_childcount.dta.13 = read.table(file = "http://www2.ed.gov/programs/osepidea/618-data/state-level-data-files/part-b-data/child-count-and-educational-environments/bchildcountandedenvironments2013.csv", header = TRUE, sep = ",")
-GA.IDEA_childcount.dta.13 <- IDEA_childcount.dta.13 %>% slice(3463:3729) 
-names(GA.IDEA_childcount.dta.13) <- c("Year",	"State Name",	"SEA Education Environment",	"SEA Disability Category",	"Age 3",	"Age 4",	"Age 5",	"American Indian or Alaska Native Age 3 to 5", 	"Asian Age 3-5", 	"Black or African American Age 3-5", 	"Hispanic/Latino Age 3-5", 	"Native Hawaiian or Other Pacific Islander Age 3-5", 	"Two or More Races Age 3-5", 	"White Age 3-5", 	"Female Age 3 to 5",	"Male Age 3 to 5",	"LEP Yes Age 3 to 5",	"LEP No Age 3 to 5",	"Age 3 to 5",	"Age 6",	"Age 7",	"Age 8",	"Age 9",	"Age 10",	"Age 11",	"Age 12",	"Age 13",	"Age 14",	"Age 15",	"Age 16",	"Age 17",	"Age 18",	"Age 19",	"Age 20",	"Age 21",	"Age 6-11",	"Age 12-17",	"Age 18-21",	"Ages 6-21",	"LEP Yes Age 6 to 21",	"LEP No Age 6 to 21",	"Female Age 6 to 21",	"Male Age 6 to 21",	"American Indian or Alaska Native Age 6 to21",	"Asian Age 6 to21",	"Black or African American Age 6 to21",	"Hispanic/Latino Age 6 to21",	"Native Hawaiian or Other Pacific Islander Age 6 to21",	"Two or more races Age 6 to21",	"White Age 6 to21")
-GA.EBD.dta.13 <- GA.IDEA_childcount.dta.13 %>% filter(`SEA Disability Category`=='Emotional disturbance') %>% select(`Age 6-11`, `Age 12-17`, `Age 18-21`, `Ages 6-21`)
-####
-
-
-
 #### RUN THIS FIRST; THIS IS WHAT I WILL BE WORKING WITH.
 district.data.13 = read.table(file = "http://www2.census.gov/govs/school/elsec13t.txt", header = TRUE, sep = ",")
 my.district.data.13 <- district.data.13[c("NAME", "ENROLL", "TOTALREV", "TFEDREV", "FEDRSPEC", "STRSPEC", "STROTHR", "TLOCREV", "LOCROSCH", "TOTALEXP", "TCURINST", "TCURSSVC", "TCURSPUP", "PCTTOTAL", "PCTFTOT", "PCTSTOT", "PCTLTOT", "PCTLOTHG", "PPCSTOT", "PPITOTAL", "PPSTOTAL", "PPSPUPIL")]
@@ -39,6 +30,14 @@ Rutland.Bounds.NE.GA.RESA.13 <- GA.district.data.13[c(7,34,61,81,96,97,98,121,12
 
 
 
+
+
+####NOT SURE IF I NEED THIS...WANTED TO HAVE IT JUST IN CASE I CAN'T FIND ACTUAL NUMBER OF STUDENTS IN THE DISTRICTS...
+IDEA_childcount.dta.13 = read.table(file = "http://www2.ed.gov/programs/osepidea/618-data/state-level-data-files/part-b-data/child-count-and-educational-environments/bchildcountandedenvironments2013.csv", header = TRUE, sep = ",")
+GA.IDEA_childcount.dta.13 <- IDEA_childcount.dta.13 %>% slice(3463:3729) 
+names(GA.IDEA_childcount.dta.13) <- c("Year",	"State Name",	"SEA Education Environment",	"SEA Disability Category",	"Age 3",	"Age 4",	"Age 5",	"American Indian or Alaska Native Age 3 to 5", 	"Asian Age 3-5", 	"Black or African American Age 3-5", 	"Hispanic/Latino Age 3-5", 	"Native Hawaiian or Other Pacific Islander Age 3-5", 	"Two or More Races Age 3-5", 	"White Age 3-5", 	"Female Age 3 to 5",	"Male Age 3 to 5",	"LEP Yes Age 3 to 5",	"LEP No Age 3 to 5",	"Age 3 to 5",	"Age 6",	"Age 7",	"Age 8",	"Age 9",	"Age 10",	"Age 11",	"Age 12",	"Age 13",	"Age 14",	"Age 15",	"Age 16",	"Age 17",	"Age 18",	"Age 19",	"Age 20",	"Age 21",	"Age 6-11",	"Age 12-17",	"Age 18-21",	"Ages 6-21",	"LEP Yes Age 6 to 21",	"LEP No Age 6 to 21",	"Female Age 6 to 21",	"Male Age 6 to 21",	"American Indian or Alaska Native Age 6 to21",	"Asian Age 6 to21",	"Black or African American Age 6 to21",	"Hispanic/Latino Age 6 to21",	"Native Hawaiian or Other Pacific Islander Age 6 to21",	"Two or more races Age 6 to21",	"White Age 6 to21")
+GA.EBD.dta.13 <- GA.IDEA_childcount.dta.13 %>% filter(`SEA Disability Category`=='Emotional disturbance') %>% select(`Age 6-11`, `Age 12-17`, `Age 18-21`, `Ages 6-21`)
+####
 
 ##########NOT SURE IF I NEED THESE EITHER...
 IDEA_childcount.dta.12 = read.table(file = "http://www2.ed.gov/programs/osepidea/618-data/state-level-data-files/part-b-data/child-count-and-educational-environments/bchildcountandedenvironments2012.csv", header = TRUE, sep = ",")
