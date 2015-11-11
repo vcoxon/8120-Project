@@ -8,9 +8,12 @@ names(GA.IDEA_childcount.dta.13) <- c("Year",	"State Name",	"SEA Education Envir
 GA.EBD.dta.13 <- GA.IDEA_childcount.dta.13 %>% filter(`SEA Disability Category`=='Emotional disturbance') %>% select(`Age 6-11`, `Age 12-17`, `Age 18-21`, `Ages 6-21`)
 
 district.data.13 = read.table(file = "http://www2.census.gov/govs/school/elsec13t.txt", header = TRUE, sep = ",")
-head(district.data.13)
+my.district.data.13 <- district.data.13[c("NAME", "ENROLL", "TOTALREV", "TFEDREV", "FEDRSPEC", "STRSPEC", "STROTHR", "TLOCREV", "LOCROSCH", "TOTALEXP", "TCURINST", "TCURSSVC", "PCTTOTAL", "PCTFTOT", "PCTSTOT", "PCTLTOT", "PCTLOTHG", "PPCSTOT", "PPITOTAL", "PPSTOTAL")]
+head(my.district.data.13)
+# I need to find the population parameter for spending.
+
 # I need all 196 observations for Georgia.
-GA.district.data.13 <- district.data.13 %>% slice(2199:2394)
+GA.district.data.13 <- my.district.data.13 %>% slice(2199:2394)
 head(GA.district.data.13)
 tail(GA.district.data.13)
 RESA.data.13 <- GA.district.data.13 %>% filter(ENROLL=='0')
