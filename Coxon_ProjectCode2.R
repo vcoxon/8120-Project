@@ -32,6 +32,32 @@ summary(GA.district.data.13$LOCROSCH)
 RESA.data.13 <- GA.district.data.13 %>% filter(ENROLL=='0')
 NoRESA.data.13 <- GA.district.data.13 %>% filter(ENROLL!='0')
 
+#GNETS PROGRAM <- Facility/Class Locale by School District
+Burwell <- GA.district.data.13[c(172),]
+Cedarwood <- GA.district.data.13[c(1,17,167),]
+CoastalAcad <- GA.district.data.13[c(23,77,110),]
+CoastGACompAcad <- GA.district.data.13[c(29),]
+DeKalbRockdale <- 
+ElamAlex
+FlintArea
+Futures
+Harrell
+HAVEN
+Heartland
+Horizon
+Mainstay
+NMetro
+NorthStar
+NWGAEdProg
+OakTree
+Oconee
+Pathways
+RiverQuest
+Rutland
+SandHills
+SMetro
+Woodall
+
 # NOT SURE WHAT TO DO WITH THIS YET; MAY NOT NEED IT. KEEPING IT RIGHT NOW BECAUSE IT WAS PAINSTAKING.
 Cedarwood.Bounds.First.Dist.RESA.13 <- GA.district.data.13[c(1, 17, 24, 63, 100, 160, 167, 168, 186),]
 Coastal.Bounds.First.Dist.RESA.13 <- GA.district.data.13[c(16, 23, 77, 110, 112, 119),]
