@@ -40,9 +40,7 @@ CoastGACompAcad <- GA.district.data.13[c(29),]
 DeKalbRockdale <- GA.district.data.13[c(52),]
 ElamAlex <- GA.district.data.13[c(12,94),]
 FlintArea <- GA.district.data.13[C(47),]
-Futures <- GA.district.data.13[c(49,69,84,154,175,189),]  
-#MAY NEED TO REEVALUATE STRUCTURE; 2013 data would only include Gainesville City {c(85),]
-#Is this unethical? Am I data "hacking" if I do this?
+Futures <- GA.district.data.13[c(49,69,84,154,175,189),]  #MAY NEED TO REEVALUATE STRUCTURE; 2013 data would only include Gainesville City [c(85),].  #Is this unethical? Am I data "hacking" if I do this?
 Harrell <- GA.district.data.13[c(181),]
 HAVEN <- GA.district.data.13[c(39),]
 Heartland <- GA.district.data.13[c(128),]
