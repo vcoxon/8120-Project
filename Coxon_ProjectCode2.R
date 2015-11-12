@@ -37,26 +37,28 @@ Burwell <- GA.district.data.13[c(172),]
 Cedarwood <- GA.district.data.13[c(1,17,167),]
 CoastalAcad <- GA.district.data.13[c(23,77,110),]
 CoastGACompAcad <- GA.district.data.13[c(29),]
-DeKalbRockdale <- 
-ElamAlex
-FlintArea
-Futures
-Harrell
-HAVEN
-Heartland
-Horizon
-Mainstay
-NMetro
-NorthStar
-NWGAEdProg
-OakTree
-Oconee
-Pathways
-RiverQuest
-Rutland
-SandHills
-SMetro
-Woodall
+DeKalbRockdale <- GA.district.data.13[c(52),]
+ElamAlex <- GA.district.data.13[c(12,94),]
+FlintArea <- GA.district.data.13[C(47),]
+Futures <- GA.district.data.13[c(49,69,84,154,175,189),]  
+#MAY NEED TO REEVALUATE STRUCTURE; 2013 data would only include Gainesville City {c(85),]
+#Is this unethical? Am I data "hacking" if I do this?
+Harrell <- GA.district.data.13[c(181),]
+HAVEN <- GA.district.data.13[c(39),]
+Heartland <- GA.district.data.13[c(128),]
+Horizon <- GA.district.data.13[c(11,114,166),]
+Mainstay <- GA.district.data.13[c(152),]
+NMetro <- GA.district.data.13[c(71,72,83),]
+NorthStar <- GA.district.data.13[c(138),]
+NWGAEdProg <- GA.district.data.13[c(67),]
+OakTree <- GA.district.data.13[c(56),]
+Oconee <- GA.district.data.13[c(5,103),]
+Pathways <- GA.district.data.13[c(42,50,164)]
+RiverQuest <- GA.district.data.13[c(19),]
+Rutland <- GA.district.data.13[c(34),]
+SandHills <- GA.district.data.13[c(147,117),]
+SMetro <- GA.district.data.13[c(37),]
+Woodall <- GA.district.data.13[c(131),]
 
 # NOT SURE WHAT TO DO WITH THIS YET; MAY NOT NEED IT. KEEPING IT RIGHT NOW BECAUSE IT WAS PAINSTAKING.
 Cedarwood.Bounds.First.Dist.RESA.13 <- GA.district.data.13[c(1, 17, 24, 63, 100, 160, 167, 168, 186),]
