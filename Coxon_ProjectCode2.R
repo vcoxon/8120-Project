@@ -26,21 +26,24 @@ library(pastecs)
 attach(GA.district.data.13)
 GAstats <- cbind(TOTALREV, TFEDREV, FEDRSPEC, FEDROTHR, TSTREV, STRFORM, STRSPEC, STROTHR, LOCRPROP, LOCROSCH, PCTFTOT, PCTSTOT, PCTLTOT, PCTLOTHG)
 options(scipen=100)
-stat.desc(GAstats)
+options(digits = 3)
+stat.desc(GAstats, basic = F)
 
 GNETS <- GA.district.data.13[c(172,1,17,167,23,77,110,29,52,12,94,47,85,181,39,128,11,114,166,93,152,71,72,83,138,67,56,5,103,42,50,164,19,34,147,117,37,131),]
-#Defined as having a GNETS center-based program
+##Defined as having a center-based or school-based GNETS  program
 attach(GNETS)
 GNETSstats <- cbind(TOTALREV, TFEDREV, FEDRSPEC, FEDROTHR, TSTREV, STRFORM, STRSPEC, STROTHR, LOCRPROP, LOCROSCH, PCTFTOT, PCTSTOT, PCTLTOT, PCTLOTHG)
 options(scipen=100)
-stat.desc(GNETSstats)
+options(digits = 3)
+stat.desc(GNETSstats, basic = F)
 
 NoGNETS <-GA.district.data.13[c(2,3,4,6,7,8,9,10,13,14,15,16,20,21,24,25,26,27,28,30,31,32,33,36,38,40,41,43,44,45,46,48,51,53,55,57,58,59,60,61,62,63,64,65,66,70,74,76,78,79,80,81,82,86,87,88,89,90,91,92,95,96,97,98,99,100,101,102,104,105,106,107,108,109,111,112,113,116,119,120,121,122,123,124,125,126,127,129,130,132,133,134,135,136,139,140,141,142,143,144,145,146,148,149,150,151,155,156,158,159,160,161,162,163,165,168,170,171,173,174,176,177,178,179,180,183,184,186,187,188,191,192,193,194,195,196),]
-##Defined as NOT having a center-based GNETS program
+##Defined as NOT having a center-based or school-based GNETS program
 attach(NoGNETS)
 NoGNETSstats <- cbind(TOTALREV, TFEDREV, FEDRSPEC, FEDROTHR, TSTREV, STRFORM, STRSPEC, STROTHR, LOCRPROP, LOCROSCH, PCTFTOT, PCTSTOT, PCTLTOT, PCTLOTHG)
 options(scipen=100)
-stat.desc(NoGNETSstats)
+options(digits = 3)
+stat.desc(NoGNETSstats, basic = F)
 
 GA.district.data.13$GNETS <- c(1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0 ,0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0)
 summary(GA.district.data.13$GNETS=="1")
