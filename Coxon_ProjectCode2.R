@@ -9,121 +9,223 @@ library(magrittr)
 district.data.13 = read.table(file = "http://www2.census.gov/govs/school/elsec13t.txt", header = TRUE, sep = ",")
 #Need to include FEDROTHR because of GNETS funding flexibility.  
 #See  http://www.rcboe.org/sandhills and https://www.gadoe.org/School-Improvement/Federal-Programs/Pages/REAP.aspx
-my.district.data.13 <- district.data.13[c("NAME", "ENROLL", "TOTALREV", "TFEDREV", "FEDRSPEC", "FEDROTHR", "STRSPEC", "STROTHR", "TLOCREV", "LOCROSCH", "LOCROTHR", "TOTALEXP", "TCURINST", "TCURSSVC", "TCURSPUP", "PCTTOTAL", "PCTFTOT", "PCTSTOT", "PCTLTOT", "PCTLOTHG", "PPCSTOT", "PPITOTAL", "PPSTOTAL", "PPSPUPIL")]
+my.district.data.13 <- district.data.13[c("NAME", "ENROLL", "TOTALREV", "TFEDREV", "FEDRSPEC", "FEDROTHR",  "TSTREV", "STRFORM",  "STRSPEC", "STROTHR", "TLOCREV", "LOCRPROP", "LOCROSCH", "LOCROTHR", "TOTALEXP", "TCURINST", "TCURSSVC", "TCURSPUP", "PCTTOTAL", "PCTFTOT", "PCTSTOT", "PCTLTOT", "PCTLOTHG", "PPCSTOT", "PPITOTAL", "PPSTOTAL", "PPSPUPIL")]
 head(my.district.data.13)
-# I need to find the population parameter for several spending variables...
-summary(my.district.data.13$STRSPEC)
-summary(my.district.data.13$FEDRSPEC)
-summary(my.district.data.13$FEDROTHR)
-summary(my.district.data.13$LOCROSCH)
-
-
 
 # I need all 196 observations for Georgia.
 GA.district.data.13 <- my.district.data.13 %>% slice(2199:2394)
 head(GA.district.data.13)
 tail(GA.district.data.13)
-summary(GA.district.data.13$STRSPEC)
-summary(GA.district.data.13$FEDRSPEC)
-summary(GA.district.data.13$FEDROTHR)
-summary(GA.district.data.13$LOCROSCH)
+# The correct observations are included...
+
+# I need to find the population parameters for several spending variables...
+library(ggplot2)
+library(pastecs)
+
+#Univariate Descriptive Statistics: GA.district.data.13
+attach(GA.district.data.13)
+GAstats <- cbind(TOTALREV, TFEDREV, FEDRSPEC, FEDROTHR, TSTREV, STRFORM, STRSPEC, STROTHR, LOCRPROP, LOCROSCH, PCTFTOT, PCTSTOT, PCTLTOT, PCTLOTHG)
+options(scipen=100)
+stat.desc(GAstats)
+
+GNETS <- GA.district.data.13[c(172,1,17,167,23,77,110,29,52,12,94,47,85,181,39,128,11,114,166,93,152,71,72,83,138,67,56,5,103,42,50,164,19,34,147,117,37,131),]
+#Defined as having a GNETS center-based program
+attach(GNETS)
+GNETSstats <- cbind(TOTALREV, TFEDREV, FEDRSPEC, FEDROTHR, TSTREV, STRFORM, STRSPEC, STROTHR, LOCRPROP, LOCROSCH, PCTFTOT, PCTSTOT, PCTLTOT, PCTLOTHG)
+options(scipen=100)
+stat.desc(GNETSstats)
+
+NoGNETS <-GA.district.data.13[c(2,3,4,6,7,8,9,10,13,14,15,16,20,21,24,25,26,27,28,30,31,32,33,36,38,40,41,43,44,45,46,48,51,53,55,57,58,59,60,61,62,63,64,65,66,70,74,76,78,79,80,81,82,86,87,88,89,90,91,92,95,96,97,98,99,100,101,102,104,105,106,107,108,109,111,112,113,116,119,120,121,122,123,124,125,126,127,129,130,132,133,134,135,136,139,140,141,142,143,144,145,146,148,149,150,151,155,156,158,159,160,161,162,163,165,168,170,171,173,174,176,177,178,179,180,183,184,186,187,188,191,192,193,194,195,196),]
+##Defined as NOT having a center-based GNETS program
+attach(NoGNETS)
+NoGNETSstats <- cbind(TOTALREV, TFEDREV, FEDRSPEC, FEDROTHR, TSTREV, STRFORM, STRSPEC, STROTHR, LOCRPROP, LOCROSCH, PCTFTOT, PCTSTOT, PCTLTOT, PCTLOTHG)
+options(scipen=100)
+stat.desc(NoGNETSstats)
+
+GA.district.data.13$GNETS <- c(1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0 ,0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0)
+summary(GA.district.data.13$GNETS=="1")
+
+# Test for Normality
 
 
-RESA.data.13 <- GA.district.data.13 %>% filter(ENROLL=='0')
-NoRESA.data.13 <- GA.district.data.13 %>% filter(ENROLL!='0')
-
-#GNETS PROGRAM <- Facility/Class Locale by School District
-Burwell <- GA.district.data.13[c(172),]
-Cedarwood <- GA.district.data.13[c(1,17,167),]
-CoastalAcad <- GA.district.data.13[c(23,77,110),]
-CoastGACompAcad <- GA.district.data.13[c(29),]
-DeKalbRockdale <- GA.district.data.13[c(52),]
-ElamAlex <- GA.district.data.13[c(12,94),]
-FlintArea <- GA.district.data.13[C(47),]
-Futures <- GA.district.data.13[c(49,69,84,154,175,189),]  #MAY NEED TO REEVALUATE STRUCTURE; 2013 data would only include Gainesville City [c(85),].  #Is this unethical? Am I data "hacking" if I do this?
-Harrell <- GA.district.data.13[c(181),]
-HAVEN <- GA.district.data.13[c(39),]
-Heartland <- GA.district.data.13[c(128),]
-Horizon <- GA.district.data.13[c(11,114,166),]
-Mainstay <- GA.district.data.13[c(152),]
-NMetro <- GA.district.data.13[c(71,72,83),]
-NorthStar <- GA.district.data.13[c(138),]
-NWGAEdProg <- GA.district.data.13[c(67),]
-OakTree <- GA.district.data.13[c(56),]
-Oconee <- GA.district.data.13[c(5,103),]
-Pathways <- GA.district.data.13[c(42,50,164)]
-RiverQuest <- GA.district.data.13[c(19),]
-Rutland <- GA.district.data.13[c(34),]
-SandHills <- GA.district.data.13[c(147,117),]
-SMetro <- GA.district.data.13[c(37),]
-Woodall <- GA.district.data.13[c(131),]
-
-# NOT SURE WHAT TO DO WITH THIS YET; MAY NOT NEED IT. KEEPING IT RIGHT NOW BECAUSE IT WAS PAINSTAKING.
-Cedarwood.Bounds.First.Dist.RESA.13 <- GA.district.data.13[c(1, 17, 24, 63, 100, 160, 167, 168, 186),]
-Coastal.Bounds.First.Dist.RESA.13 <- GA.district.data.13[c(16, 23, 77, 110, 112, 119),]
-Heartland.Bounds.Heart.GA.RESA.13 <- GA.district.data.13[c(13,53,107,108,128,142,16,171,188,193),]
-Futures.Bounds.Pioneer.RESA.13 <- GA.district.data.13[c(6,49,69,70,84,85,86,91,116,145,154,170,175,189),]
-Burwell.Bounds.West.GA.RESA.13 <- GA.district.data.13[c(25,26,45,92,123,172),]
-Harrell.Bounds.Okefenokee.RESA.13 <- GA.district.data.13[c(2,3,14,28,38,41,139,181),]
-NMetro.Bounds.Metro.RESA.13 <- GA.district.data.13[c(71,72,82,83),]
-Northstar.Bounds.North.GA.RESA <- GA.district.data.13[c(64,74,130,138,191,192),]
-NW_GA_Ed_Program.Bounds.NW.GA.RESA.13 <- GA.district.data.13[c(8,9,27,31,32,48,66,67,78,79,88,89,135,141,177,178),] 
-GNETS_Oconee.Oconee.RESA.13 <- GA.district.data.13[c(5,87,99,103,143,184,195),]
-River_Quest.CENTRALSavannah.RESA.13 <- GA.district.data.13[c(19,62,76,98,102,150),] 
-Rutland.Bounds.NE.GA.RESA.13 <- GA.district.data.13[c(7,34,61,81,96,97,98,121,129,133,134,179,180),]
-####
+#Hypothesis testing
+t.test(GA.district.data.13$TFEDREV[GA.district.data.13$GNETS==0],GA.district.data.13$TFEDREV[GA.district.data.13$GNETS==1])
+t.test(GA.district.data.13$FEDRSPEC[GA.district.data.13$GNETS==0],GA.district.data.13$FEDRSPEC[GA.district.data.13$GNETS==1])
+t.test(GA.district.data.13$FEDROTHR[GA.district.data.13$GNETS==0],GA.district.data.13$FEDROTHR[GA.district.data.13$GNETS==1])
+t.test(GA.district.data.13$STRFORM[GA.district.data.13$GNETS==0],GA.district.data.13$STRFORM[GA.district.data.13$GNETS==1])
+t.test(GA.district.data.13$STRSPEC[GA.district.data.13$GNETS==0],GA.district.data.13$STRSPEC[GA.district.data.13$GNETS==1])
+t.test(GA.district.data.13$STROTHR[GA.district.data.13$GNETS==0],GA.district.data.13$STROTHR[GA.district.data.13$GNETS==1])
+t.test(GA.district.data.13$LOCRPROP[GA.district.data.13$GNETS==0],GA.district.data.13$LOCRPROP[GA.district.data.13$GNETS==1])
+t.test(GA.district.data.13$LOCROSCH[GA.district.data.13$GNETS==0],GA.district.data.13$LOCROSCH[GA.district.data.13$GNETS==1])
+t.test(GA.district.data.13$LOCROTHR[GA.district.data.13$GNETS==0],GA.district.data.13$LOCROTHR[GA.district.data.13$GNETS==1])
+t.test(GA.district.data.13$PCTFTOT[GA.district.data.13$GNETS==0],GA.district.data.13$PCTFTOT[GA.district.data.13$GNETS==1])
+t.test(GA.district.data.13$PCTSTOT[GA.district.data.13$GNETS==0],GA.district.data.13$PCTSTOT[GA.district.data.13$GNETS==1])
+t.test(GA.district.data.13$PCTLTOT[GA.district.data.13$GNETS==0],GA.district.data.13$PCTLTOT[GA.district.data.13$GNETS==1])
+t.test(GA.district.data.13$PCTLOTHG[GA.district.data.13$GNETS==0],GA.district.data.13$PCTLOTHG[GA.district.data.13$GNETS==1])
 
 
+library(tidyr)
+par(mfrow = c(2,2))
+boxplot(GNETS$TOTALREV,NoGNETS$TOTALREV, horizontal=TRUE,
+        names=c("GNETS","Non-GNETS"),
+        col=c("turquoise","tomato"),
+        xlab="Total Revenues",
+        main="Comparison of Total Revenues")
+
+boxplot(GNETS$TFEDREV,NoGNETS$TFEDREV, horizontal=TRUE,
+        names=c("GNETS","Non-GNETS"),
+        col=c("turquoise","tomato"),
+        xlab="Federal Revenue-Total",
+        main="Comparison of Total Federal Revenue")
+
+boxplot(GNETS$FEDRSPEC,NoGNETS$FEDRSPEC, horizontal=TRUE,
+        names=c("GNETS","Non-GNETS"),
+        col=c("turquoise","tomato"),
+        xlab="Federal Revenue-Children wth Disabilities",
+        main="Comparison of Federal Special Education Revenue")
+
+boxplot(GNETS$FEDROTHR,NoGNETS$FEDROTHR, horizontal=TRUE,
+        names=c("GNETS","Non-GNETS"),
+        col=c("turquoise","tomato"),
+        xlab="Federal Revenue-Other",
+        main="Comparison of Federal Other Revenue")
+
+boxplot(GNETS$TSTREV,NoGNETS$TSTREV, horizontal=TRUE,
+        names=c("GNETS","Non-GNETS"),
+        col=c("turquoise","tomato"),
+        xlab="State Revenue-Total",
+        main="Comparison of State Total Revenue")
+
+boxplot(GNETS$STRSPEC,NoGNETS$STRSPEC, horizontal=TRUE,
+        names=c("GNETS","Non-GNETS"),
+        col=c("turquoise","tomato"),
+        xlab="State Revenue-Special Education Programs",
+        main="Comparison of State Special Education Programs Revenue")
+
+boxplot(GNETS$STROTHR,NoGNETS$STROTHR, horizontal=TRUE,
+        names=c("GNETS","Non-GNETS"),
+        col=c("turquoise","tomato"),
+        xlab="State Revenue-Other",
+        main="Comparison of State Other Revenue")
+
+boxplot(GNETS$LOCROSCH,NoGNETS$LOCROSCH, horizontal=TRUE,
+        names=c("GNETS","Non-GNETS"),
+        col=c("turquoise","tomato"),
+        xlab="Local Revenue-Revenue from Other School Systems",
+        main="Comparison of Local Revenue from Other School Systems")
+
+boxplot(GNETS$LOCROTHR,NoGNETS$LOCROTHR, horizontal=TRUE,
+        names=c("GNETS","Non-GNETS"),
+        col=c("turquoise","tomato"),
+        xlab="Local Revenue-Other Local Revenues",
+        main="Comparison of Other Local Revenues")
+
+boxplot(GNETS$PCTFTOT,NoGNETS$PCTFTOT, horizontal=TRUE,
+        names=c("GNETS","Non-GNETS"),
+        col=c("turquoise","tomato"),
+        xlab="Percent Total Federal Revenues",
+        main="Comparison of Percent Total Federal Revenues")
+
+boxplot(GNETS$PCTSTOT,NoGNETS$PCTSTOT, horizontal=TRUE,
+        names=c("GNETS","Non-GNETS"),
+        col=c("turquoise","tomato"),
+        xlab="Percent Total State Revenues",
+        main="Comparison of Percent Total State Revenues")
+
+boxplot(GNETS$PCTLTOT,NoGNETS$PCTLTOT, horizontal=TRUE,
+        names=c("GNETS","Non-GNETS"),
+        col=c("turquoise","tomato"),
+        xlab="Percent Total Local Revenues",
+        main="Comparison of Percent Total Local Revenues")
+
+boxplot(GNETS$PCTLOTHG,NoGNETS$PCTLOTHG, horizontal=TRUE,
+        names=c("GNETS","Non-GNETS"),
+        col=c("turquoise","tomato"),
+        xlab="Percent Revenue  from Other Local Governments",
+        main="Comparison of Percent Revenues from Other Local Governments")
 
 
 
-####NOT SURE IF I NEED THIS...WANTED TO HAVE IT JUST IN CASE I CAN'T FIND ACTUAL NUMBER OF STUDENTS IN THE DISTRICTS...
-IDEA_childcount.dta.13 = read.table(file = "http://www2.ed.gov/programs/osepidea/618-data/state-level-data-files/part-b-data/child-count-and-educational-environments/bchildcountandedenvironments2013.csv", header = TRUE, sep = ",")
-GA.IDEA_childcount.dta.13 <- IDEA_childcount.dta.13 %>% slice(3463:3729) 
-names(GA.IDEA_childcount.dta.13) <- c("Year",	"State Name",	"SEA Education Environment",	"SEA Disability Category",	"Age 3",	"Age 4",	"Age 5",	"American Indian or Alaska Native Age 3 to 5", 	"Asian Age 3-5", 	"Black or African American Age 3-5", 	"Hispanic/Latino Age 3-5", 	"Native Hawaiian or Other Pacific Islander Age 3-5", 	"Two or More Races Age 3-5", 	"White Age 3-5", 	"Female Age 3 to 5",	"Male Age 3 to 5",	"LEP Yes Age 3 to 5",	"LEP No Age 3 to 5",	"Age 3 to 5",	"Age 6",	"Age 7",	"Age 8",	"Age 9",	"Age 10",	"Age 11",	"Age 12",	"Age 13",	"Age 14",	"Age 15",	"Age 16",	"Age 17",	"Age 18",	"Age 19",	"Age 20",	"Age 21",	"Age 6-11",	"Age 12-17",	"Age 18-21",	"Ages 6-21",	"LEP Yes Age 6 to 21",	"LEP No Age 6 to 21",	"Female Age 6 to 21",	"Male Age 6 to 21",	"American Indian or Alaska Native Age 6 to21",	"Asian Age 6 to21",	"Black or African American Age 6 to21",	"Hispanic/Latino Age 6 to21",	"Native Hawaiian or Other Pacific Islander Age 6 to21",	"Two or more races Age 6 to21",	"White Age 6 to21")
-GA.EBD.dta.13 <- GA.IDEA_childcount.dta.13 %>% filter(`SEA Disability Category`=='Emotional disturbance') %>% select(`Age 6-11`, `Age 12-17`, `Age 18-21`, `Ages 6-21`)
-####
 
-##########NOT SURE IF I NEED THESE EITHER...
-IDEA_childcount.dta.12 = read.table(file = "http://www2.ed.gov/programs/osepidea/618-data/state-level-data-files/part-b-data/child-count-and-educational-environments/bchildcountandedenvironments2012.csv", header = TRUE, sep = ",")
-head(IDEA_childcount.dta.12)
-GA.IDEA_childcount.dta.12 <- IDEA_childcount.dta.12%>% slice(3463:3729)
-str(GA.IDEA_childcount.dta.12$x.1)
-GA.EBD.dta.12 <- GA.IDEA_childcount.dta.12 %>% filter(X.1=='Emotional disturbance')
-names(GA.EBD.dta.12)
-#GUIDE: (hsb4 <- hsb2.small[, 1:4]) to get columns 14:17
-GA.EBD.dta.12 <- GA.EBD.dta.12[, 14:17]
+par(mfrow = c(2,2))
+ggplot(data = GA.district.data.13,aes(x = FEDRSPEC)) + geom_histogram(aes(group=GNETS,fill=as.factor(GNETS)),position='dodge')+
+  ylab('Frequency') + xlab('Federal Funding - Children with Disabilities') +
+  scale_fill_discrete('',labels=c('Non-GNETS','GNETS')) + 
+  scale_x_continuous(expand=c(0,0)) + 
+  scale_y_continuous(expand=c(0,0)) + 
+  theme_bw() + theme(legend.position=c(.8,.40))
 
-six.sepsch.GA.EBD.dta.12 <- 410
-twelve.sepsch.GA.EBD.dta.12 = 916
-eighteen.sepsch.GA.EBD.dta.12 = 113
-total.sepsch.GA.EBD.dta.12 = 1439
+ggplot(data = GA.district.data.13,aes(x = FEDROTHR)) + geom_histogram(aes(group=GNETS,fill=as.factor(GNETS)),position='dodge')+
+  ylab('Frequency') + xlab('Federal Funding - All Other Federal Funding') +
+  scale_fill_discrete('',labels=c('Non-GNETS','GNETS')) + 
+  scale_x_continuous(expand=c(0,0)) + 
+  scale_y_continuous(expand=c(0,0)) + 
+  theme_bw() + theme(legend.position=c(.8,.40))
 
-TOTsix.GA.EBD.dta.12 = 3796
-TOTtwleve.GA.EBD.dta.12 = 8787
-TOTeighteen.GA.EBD.dta.12 = 1046
-TOTAL.GA.EBD.dta.12 = 13629
+ggplot(data = GA.district.data.13,aes(x = STRFORM)) + geom_histogram(aes(group=GNETS,fill=as.factor(GNETS)),position='dodge')+
+  ylab('Frequency') + xlab('State Funding - Special Education Programs') +
+  scale_fill_discrete('',labels=c('Non-GNETS','GNETS')) + 
+  scale_x_continuous(expand=c(0,0)) + 
+  scale_y_continuous(expand=c(0,0)) + 
+  theme_bw() + theme(legend.position=c(.8,.40))
 
-district.data.12 = read.table(file = "http://www2.census.gov/govs/school/elsec12t.txt", header = TRUE, sep = ",")
-head(district.data.12)
-GA.district.data.12 <- district.data.12[2201:2396,]
-head(GA.district.data.12)
-tail(GA.district.data.12)
-RESA.data.12 <- GA.district.data.12 %>% filter(ENROLL=='0')
-print(RESA.data.12)
-##########
-##########
-IDEA_childcount.dta.11 = read.table(file = "http://www2.ed.gov/programs/osepidea/618-data/state-level-data-files/part-b-data/educational-environments/benvironment2011.csv", header = TRUE, sep = ",")
-head(IDEA_childcount.dta.11)
-GA.IDEA_childcount.dta.11 <- IDEA_childcount.dta.11[3729:3994,]
-# GUIDE:  mtcars[c(3, 24),] from http://www.r-tutor.com/r-introduction/data-frame/data-frame-row-slice
-ages.GA.EBD.dta.11 <- GA.IDEA_childcount.dta.11[c(3733,3747,3761,3775,3789,3803,3817,3831,3845,3859,3873,3887,3901,3915,3929,3943,3957,3971,3985),]
+ggplot(data = GA.district.data.13,aes(x = STRSPEC)) + geom_histogram(aes(group=GNETS,fill=as.factor(GNETS)),position='dodge')+
+  ylab('Frequency') + xlab('State Funding - Special Education Programs') +
+  scale_fill_discrete('',labels=c('Non-GNETS','GNETS')) + 
+  scale_x_continuous(expand=c(0,0)) + 
+  scale_y_continuous(expand=c(0,0)) + 
+  theme_bw() + theme(legend.position=c(.8,.40))
 
-district.data.11 = read.table(file = "http://www2.census.gov/govs/school/elsec11t.txt", header = TRUE, sep = ",")
-head(district.data.11)
-GA.district.data.11 <- district.data.11[2199:2394,]
-head(GA.district.data.11)
-tail(GA.district.data.11)
-RESA.data.11 <- GA.district.data.11 %>% filter(ENROLL=='0')
-print(RESA.data.11)
-##########
+ggplot(data = GA.district.data.13,aes(x = STROTHR)) + geom_histogram(aes(group=GNETS,fill=as.factor(GNETS)),position='dodge')+
+  ylab('Frequency') + xlab('State Funding - All Other State Revenue') +
+  scale_fill_discrete('',labels=c('Non-GNETS','GNETS')) + 
+  scale_x_continuous(expand=c(0,0)) + 
+  scale_y_continuous(expand=c(0,0)) + 
+  theme_bw() + theme(legend.position=c(.8,.40))
+
+ggplot(data = GA.district.data.13,aes(x = LOCROSCH)) + geom_histogram(aes(group=GNETS,fill=as.factor(GNETS)),position='dodge')+
+  ylab('Frequency') + xlab('Local Funding - Revenue From Other School Systems') +
+  scale_fill_discrete('',labels=c('Non-GNETS','GNETS')) + 
+  scale_x_continuous(expand=c(0,0)) + 
+  scale_y_continuous(expand=c(0,0)) + 
+  theme_bw() + theme(legend.position=c(.8,.40))
+
+ggplot(data = GA.district.data.13,aes(x = LOCROTHR)) + geom_histogram(aes(group=GNETS,fill=as.factor(GNETS)),position='dodge')+
+  ylab('Frequency') + xlab('Local Funding - Other Local Revenues') +
+  scale_fill_discrete('',labels=c('Non-GNETS','GNETS')) + 
+  scale_x_continuous(expand=c(0,0)) + 
+  scale_y_continuous(expand=c(0,0)) + 
+  theme_bw() + theme(legend.position=c(.8,.40))
+
+ggplot(data = GA.district.data.13,aes(x = PCTFTOT)) + geom_histogram(aes(group=GNETS,fill=as.factor(GNETS)),position='dodge')+
+  ylab('Frequency') + xlab('Percent Federal Revenue - Total Revenue From Federal Sources') +
+  scale_fill_discrete('',labels=c('Non-GNETS','GNETS')) + 
+  scale_x_continuous(expand=c(0,0)) + 
+  scale_y_continuous(expand=c(0,0)) + 
+  theme_bw() + theme(legend.position=c(.8,.40))
+
+ggplot(data = GA.district.data.13,aes(x = PCTSTOT)) + geom_histogram(aes(group=GNETS,fill=as.factor(GNETS)),position='dodge')+
+  ylab('Frequency') + xlab('Percent State Revenue - Total Revenue From State Sources') +
+  scale_fill_discrete('',labels=c('Non-GNETS','GNETS')) + 
+  scale_x_continuous(expand=c(0,0)) + 
+  scale_y_continuous(expand=c(0,0)) + 
+  theme_bw() + theme(legend.position=c(.8,.40))
+
+ggplot(data = GA.district.data.13,aes(x = PCTLTOT)) + geom_histogram(aes(group=GNETS,fill=as.factor(GNETS)),position='dodge')+
+  ylab('Frequency') + xlab('Percent Local Revenue - Total Revenue From Local Sources') +
+  scale_fill_discrete('',labels=c('Non-GNETS','GNETS')) + 
+  scale_x_continuous(expand=c(0,0)) + 
+  scale_y_continuous(expand=c(0,0)) + 
+  theme_bw() + theme(legend.position=c(.8,.40))
+
+ggplot(data = GA.district.data.13,aes(x = PCTLOTHG)) + geom_histogram(aes(group=GNETS,fill=as.factor(GNETS)),position='dodge')+
+  ylab('Frequency') + xlab('Percent Local Other Government Revenue - Total Revenue From Other Local Governments') +
+  scale_fill_discrete('',labels=c('Non-GNETS','GNETS')) + 
+  scale_x_continuous(expand=c(0,0)) + 
+  scale_y_continuous(expand=c(0,0)) + 
+  theme_bw() + theme(legend.position=c(.8,.40))
+
+
+
+
+ 
