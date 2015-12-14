@@ -49,6 +49,38 @@ GA.district.data.13$GNETS <- c(1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1
 summary(GA.district.data.13$GNETS=="1")
 
 # Test for Normality
+ggplot(data = GA.district.data.13,aes(x = PCTFTOT)) + geom_histogram(aes(group=GNETS,fill=as.factor(GNETS)),position='dodge')+
+  ylab('Frequency') + xlab('Percent Federal Revenue - Total Revenue From Federal Sources') +
+  scale_fill_discrete('',labels=c('Non-GNETS','GNETS')) + 
+  scale_x_continuous(expand=c(0,0)) + 
+  scale_y_continuous(expand=c(0,0)) + 
+  theme_bw() + theme(legend.position=c(.8,.40))
+
+ggplot(data = GA.district.data.13,aes(x = PCTSTOT)) + geom_histogram(aes(group=GNETS,fill=as.factor(GNETS)),position='dodge')+
+  ylab('Frequency') + xlab('Percent State Revenue - Total Revenue From State Sources') +
+  scale_fill_discrete('',labels=c('Non-GNETS','GNETS')) + 
+  scale_x_continuous(expand=c(0,0)) + 
+  scale_y_continuous(expand=c(0,0)) + 
+  theme_bw() + theme(legend.position=c(.8,.40))
+
+ggplot(data = GA.district.data.13,aes(x = TFEDREV)) + geom_histogram(aes(group=GNETS,fill=as.factor(GNETS)),position='dodge')+
+  ylab('Frequency') + xlab('Percent Federal Revenue - Total Revenue From Federal Sources') +
+  scale_fill_discrete('',labels=c('Non-GNETS','GNETS')) + 
+  scale_x_continuous(expand=c(0,0)) + 
+  scale_y_continuous(expand=c(0,0)) + 
+  theme_bw() + theme(legend.position=c(.8,.40))
+
+ggplot(data = GA.district.data.13,aes(x = TSTREV)) + geom_histogram(aes(group=GNETS,fill=as.factor(GNETS)),position='dodge')+
+  ylab('Frequency') + xlab('Percent State Revenue - Total Revenue From State Sources') +
+  scale_fill_discrete('',labels=c('Non-GNETS','GNETS')) + 
+  scale_x_continuous(expand=c(0,0)) + 
+  scale_y_continuous(expand=c(0,0)) + 
+  theme_bw() + theme(legend.position=c(.8,.40))
+
+ggplot(GA.district.data.13, aes(x = PCTFTOT, group = GNETS)) + geom_density(aes(colour = as.factor(GNETS))) + theme_bw() + theme(legend.position = c(0.8,0.3))
+ggplot(GA.district.data.13, aes(x = PCTSTOT, group = GNETS)) + geom_density(aes(colour = as.factor(GNETS))) + theme_bw() + theme(legend.position = c(0.8,0.3))
+ggplot(GA.district.data.13, aes(x = TFEDREV, group = GNETS)) + geom_density(aes(colour = as.factor(GNETS))) + theme_bw() + theme(legend.position = c(0.8,0.3))
+ggplot(GA.district.data.13, aes(x = TSTREV, group = GNETS)) + geom_density(aes(colour = as.factor(GNETS))) + theme_bw() + theme(legend.position = c(0.8,0.3))
 
 
 #Hypothesis testing
@@ -200,19 +232,7 @@ ggplot(data = GA.district.data.13,aes(x = LOCROTHR)) + geom_histogram(aes(group=
   scale_y_continuous(expand=c(0,0)) + 
   theme_bw() + theme(legend.position=c(.8,.40))
 
-ggplot(data = GA.district.data.13,aes(x = PCTFTOT)) + geom_histogram(aes(group=GNETS,fill=as.factor(GNETS)),position='dodge')+
-  ylab('Frequency') + xlab('Percent Federal Revenue - Total Revenue From Federal Sources') +
-  scale_fill_discrete('',labels=c('Non-GNETS','GNETS')) + 
-  scale_x_continuous(expand=c(0,0)) + 
-  scale_y_continuous(expand=c(0,0)) + 
-  theme_bw() + theme(legend.position=c(.8,.40))
 
-ggplot(data = GA.district.data.13,aes(x = PCTSTOT)) + geom_histogram(aes(group=GNETS,fill=as.factor(GNETS)),position='dodge')+
-  ylab('Frequency') + xlab('Percent State Revenue - Total Revenue From State Sources') +
-  scale_fill_discrete('',labels=c('Non-GNETS','GNETS')) + 
-  scale_x_continuous(expand=c(0,0)) + 
-  scale_y_continuous(expand=c(0,0)) + 
-  theme_bw() + theme(legend.position=c(.8,.40))
 
 ggplot(data = GA.district.data.13,aes(x = PCTLTOT)) + geom_histogram(aes(group=GNETS,fill=as.factor(GNETS)),position='dodge')+
   ylab('Frequency') + xlab('Percent Local Revenue - Total Revenue From Local Sources') +
