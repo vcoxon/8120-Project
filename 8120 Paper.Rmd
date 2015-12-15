@@ -1,0 +1,565 @@
+---
+title: "8120 Paper"
+author: "Victoria Coxon"
+date: "December 14, 2015"
+output: html_document
+---
+
+---
+title: "Supported or Segregated? LEAs, GNETS, and the ADA"
+author: "Victoria Coxon"
+date: "December 13, 2015"
+output: html_document
+---
+
+```{r,echo=FALSE}
+library(foreign)
+library(dplyr)
+#### RUN THIS FIRST; THIS IS WHAT I WILL BE WORKING WITH.
+# Variables IDCENSUS, NAME, CONUM, CSA, CBSA, and NCEID are alphanumeric character strings.
+# All amounts are expressed in thousands of dollars.
+
+district.data.13 = read.table(file = "http://www2.census.gov/govs/school/elsec13t.txt", header = TRUE, sep = ",")
+#Need to include FEDROTHR because of GNETS funding flexibility.  
+#See  http://www.rcboe.org/sandhills and https://www.gadoe.org/School-Improvement/Federal-Programs/Pages/REAP.aspx
+my.district.data.13 <- district.data.13[c("NAME", "ENROLL", "TOTALREV", "TFEDREV", "FEDRSPEC", "FEDROTHR",  "TSTREV", "STRFORM",  "STRSPEC", "STROTHR", "TLOCREV", "LOCRPROP", "LOCROSCH", "LOCROTHR", "TOTALEXP", "TCURINST", "TCURSSVC", "TCURSPUP", "PCTTOTAL", "PCTFTOT", "PCTSTOT", "PCTLTOT", "PCTLOTHG", "PPCSTOT", "PPITOTAL", "PPSTOTAL", "PPSPUPIL")]
+
+
+# I need all 196 observations for Georgia.
+GA.district.data.13 <- my.district.data.13 %>% slice(2199:2394)
+
+# I need to find the population parameters for several spending variables...
+library(ggplot2)
+library(pastecs)
+```
+
+```{r, echo=FALSE}
+GA.district.data.13$GNETS <- c(1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0 ,0, 0, 0, 1, 1, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0)
+```
+
+##Abstract
+  
+
+
+
+## Introduction
+
+The Georgia Network for Educational and Therapeutic Supports (GNETS) is comprised of 24 programs that support the local school districts’ continuum of services for students with disabilities, ages 3-21. The programs provide comprehensive educational and therapeutic support services to students who might otherwise require residential or other more restrictive placements due to the severity of their behaviors.
+
+On July 15, 2015, the U.S. Department of Justice's Office of Civil Rights (DOJ-OCR) issued a Letter of Findings (LOF) to the  current Georgia Governor, Nathan Deal, informing him of the State of Georgia’s violation of Title II of the ADA which establishes that individuals with mental health disabilities have rights to “integrated settings” in which to receieve public education.  
+
+The LOF stated that the State of Georgia was illegally discriminating against students solely on the basis of their disability and was also practicing disability-based segregation in the continuous funding and operation of the Georgia Network for Educational and Therapeutic Supports (GNETS) regional special education programs.  Stand-alone, center-based GNETS programs do not afford students with behavioral disabilities an “integrated setting.”  An "integrated setting" in this context means that students are to be educated the public school in their home attendance zone (i.e. their home school).  A 2010 Georgia Department of Audits and Accounts (DOAA) GNETS Performance Audit provided much of the evidence for the foundation of the DOJ Letter of Findings and which supported the discrimination and segregation claims.
+
+In trying to better  understand Georgia's continued operatation of GNETS programs, a logical starting point for analysis would be school system finances.  Our research question is as follows:
+
+__Do school districts with GNETS schools and programs receive more money from the state?__
+
+The answer to this question can indicate the possibility of financial incentives that "reward" school districts that operate and/or administer GNETS programs within their districts.
+
+__Scope__
+This  research is intended to be an initial exploratory analysis of special education funding streams to ascertain whether financial disparities exist between Local Educational Agencies (LEAs) that  have the GNETS schools within their  boundaries and those that do not.  
+
+## Data
+
+This research uses the Individual Unit Table from the Federal,State and Local Governments, Public Elementary-Secondary Education Finance Data from 2013.  The 2013 Individual Unit Table contain data for selected revenue, expenditure, and debt data items for all school systems collected as part of the 2013 Annual Survey of School System Finances authorized by law under Title 13, United States Code, Section 161 and 162.  All amounts except for fall membership are expressed in thousands of dollars.  Fall membership data are expressed in whole amounts and represent the FTE count in October of the 2013-2014 school year.  The data file may be downloaded from the Census Bureau's website at http://www.census.gov/govs/school/.
+
+The units of analysis are the 196 Local Education Agencies (LEAs) within Georgia.  Of the 196 LEAs, 24 function as fiscal agents for the GNETS  programs.  The GNETS programs can include segregated stand-alone centers/sites only serving special education students as well as segregated/minimally integrated classroom programs located at specific local public schools.  For the purposes of this study, center-based refers to stand-alone GNETS sites while school-based refers to classroom GNETS programs. 
+
+Students eligible for GNETS programs are special education students as defined by the Indiviuals with Disiabilities in Education Act (IDEA). GNETS students have disabilities that impede their learning and/or the learning of others to the extent that they require an Individualized Education Plan (IEP) in order to access the General Education curriculum and receive educational benefit.  IEPs must satisfy the legal requirement of a Free and Appropriate Public Education (FAPE) in the Least Restrictive Environment (LRE).  Students protected under IDEA are also protected under the Americans with Disabilities Act with the ADA definition of disability as a condition that "limits one or more major life activities, a person who has a history or record of such an impairment, or a person who is perceived by others as having such an impairment" (U.S. Department of Justice).  
+
+Because GNETS students are special education students with distinct federal protections, education funds are distributed separately from those used for General Education students funding.  Whereas, puublic schoool funding is generally a function of local property taxes, state general funding formulas, and some federal funds, special education students are recognized as being more costly and the federal government proviides more funding to states to provide educational services to these students.   
+
+Additionally, the State of Georgia has a line-item in the State Budget for the operation of GNETS programs.  Ths line-item is separate from other Georgia Department of  Education funding and could feasibly be captured in the variable 'STROTHR'.  
+
+Lastly, GNETS programs are the result of regional partnerships among adjoining LEAs.  It is feasible that funds accountability methods require that the student's  home school district "pay"" the receiving school district for the services provided at the receving school district's GNETS program.  The variable 'LOCROSCH' was chosen for its feasibility in capturing this data.  
+
+For the above-referenced reasons, this research narrowly focuses on the following variables from the 2013 Individual Unit table:
+
+* FEDRSPEC  Children with Disabilities
+* STRSPEC   State Special Education Programs
+* STROTHR   All Other State Revenue
+* LOCROSCH  Revenue from Other School Systems
+
+While there are several GNETS centers that operate out of older school buildings no longer used by General Education students, GNETS programs are defined as “special entities” as opposed to actual schools.  This is likely due to the nature of the intergovernmental agreements between the local school districts and the GNETS  Fiscal Agents that administer the GNETS centers and classrooms.   Therefore it is extremely difficult to find, separate, and directly analyze the programs with the traditional tools available such as standardized test score data, funding, and FTE counts.  In order to address the absence of publicly available information, I conducted extensive internet research aimed at locating all the GNETS center-based and school-based programs in operation as of Novmber 18, 2015.  "In operation" is defined in this context as meeting the following requirements: 
+
+1. Listed in the Georgia Department of Education FY 2015 GNETS Program Directory
+2. Having a functioning website, and 
+3. a verifiable and active physical address using Google Maps Street View.  
+
+This data was used to construct a comprehensive list of the GNETS programs which was then used as the basis for coding all 196 observations after the creation of a GNETS dummy variable (GNETS; 0 = the absence of a GNETS program, 1 = presence of a GNETS program). The information used to construct this variable is included in the Appendix as a table. 
+
+```{r, echo=FALSE}
+#Univariate Descriptive Statistics: GA.district.data.13
+library(magrittr)
+GA_Summary_Stats <- GA.district.data.13 %>% select(cbind(FEDRSPEC, STRSPEC, STROTHR, LOCROSCH)) %>% summarise_each(funs(mean(.,na.rm=T))) %>% t(.)
+colnames(GA_Summary_Stats) <- 'GA LEA Mean'
+library(knitr)
+kable(GA_Summary_Stats)
+
+GNETS <- GA.district.data.13[c(172,1,17,167,23,77,110,29,52,12,94,47,85,181,39,128,11,114,166,93,152,71,72,83,138,67,56,5,103,42,50,164,19,34,147,117,37,131),]
+##Defined as having a center-based or school-based GNETS  program
+
+GNETS_Summary_Stats <- GNETS %>% select(cbind(FEDRSPEC, STRSPEC, STROTHR, LOCROSCH)) %>% summarise_each(funs(mean(.,na.rm=T))) %>% t(.)
+colnames(GNETS_Summary_Stats) <- 'GNETS LEA Mean'
+kable(GNETS_Summary_Stats)
+
+NoGNETS <-GA.district.data.13[c(2,3,4,6,7,8,9,10,13,14,15,16,20,21,24,25,26,27,28,30,31,32,33,36,38,40,41,43,44,45,46,48,51,53,55,57,58,59,60,61,62,63,64,65,66,70,74,76,78,79,80,81,82,86,87,88,89,90,91,92,95,96,97,98,99,100,101,102,104,105,106,107,108,109,111,112,113,116,119,120,121,122,123,124,125,126,127,129,130,132,133,134,135,136,139,140,141,142,143,144,145,146,148,149,150,151,155,156,158,159,160,161,162,163,165,168,170,171,173,174,176,177,178,179,180,183,184,186,187,188,191,192,193,194,195,196),]
+##Defined as NOT having a center-based or school-based GNETS program
+
+NoGNETS_Summary_Stats <- NoGNETS %>% select(cbind(FEDRSPEC, STRSPEC, STROTHR, LOCROSCH)) %>% summarise_each(funs(mean(.,na.rm=T))) %>% t(.)
+colnames(NoGNETS_Summary_Stats) <- 'NoGNETS LEA Mean'
+kable(NoGNETS_Summary_Stats)
+```
+
+## Population
+Students eligible for GNETS programs are special education students as defined by the Indiviuals with Disiabilities in Education Act (IDEA). GNETS students have disabilities that impede their learning and/or the learning of others to the extent that they require an Individualized Education Plan (IEP) in order to access the General Education curriculum and receive educational benefit.  IEPs must satisfy the legal requirement of a Free and Appropriate Public Education (FAPE) in the Least Restrictive Environment (LRE).  Students protected under IDEA are also protected under the Americans with Disabilities Act with the ADA definition of disability as a condition that "limits one or more major life activities, a person who has a history or record of such an impairment, or a person who is perceived by others as having such an impairment" (U.S. Department of Justice).
+
+## Methodology
+
+I will investigate the whether school districts with Georgia Network for Educational and Therapeutic Supports center-based or school-based programs recieve more money from the state of Georgia.   
+
+Yearly FTE counts of students served in the GNETS programs are not publicly available, hence the use of estimated counts based on budget data available on federal websites listed in the Data section.  I will attempt to discern approximate costs per student using the DOAA GNETS Performance Audit budget baseline by incorporating NPV and inflation.
+
+
+## Results
+: an explanation of what your model tells us about the research question. You should interpret relevant coefficients in context. What does your model tell us that we didn't already know before? You may want to include negative results, but be careful about how you interpret them. For example, you may want to say something along the lines of: ``we found no evidence that explanatory variable $x$ is associated with response variable $y$", or ``explanatory variable $x$ did not provide any additional explanatory power above what was already conveyed by explanatory variable $z$." On other hand, you probably shouldn't claim: ``there is no relationship between $x$ and $y$."
+
+```{r,echo=FALSE}
+#Hypothesis testing
+t.test(GA.district.data.13$FEDRSPEC[GA.district.data.13$GNETS==0],GA.district.data.13$FEDRSPEC[GA.district.data.13$GNETS==1])
+```
+
+```{r, echo = FALSE}
+t.test(GA.district.data.13$STRSPEC[GA.district.data.13$GNETS==0],GA.district.data.13$STRSPEC[GA.district.data.13$GNETS==1])
+```
+
+```{r, echo=FALSE}
+t.test(GA.district.data.13$STROTHR[GA.district.data.13$GNETS==0],GA.district.data.13$STROTHR[GA.district.data.13$GNETS==1])
+```
+
+```{r, echo=FALSE}
+t.test(GA.district.data.13$LOCROSCH[GA.district.data.13$GNETS==0],GA.district.data.13$LOCROSCH[GA.district.data.13$GNETS==1])
+```
+
+
+## Conclusion
+: a summary of your findings and a discussion of their limitations. First, remind the reader of the question that you originally set out to answer, and summarize your findings. Second, discuss the limitations of your model, and what could be done to improve it. You might also want to do the same for your data. This is your last opportunity to clarify the scope of your findings before a journalist misinterprets them and makes wild extrapolations! Protect yourself by being clear about what is not} implied by your research.
+
+
+## Appendices
+: Any combination of four tables and figures, and a statistical supplement that includes your code used for your evaluation. All of the R code necessary to produce your figures and tables must appear in the technical report. In short, the technical report should enable a reviewer to reproduce your work in full.
+
+#### Comparison of GNETS and Non-GNETS Distributions
+
+```{r, echo = FALSE}
+par(mfrow = c(2,2))
+# Test for Normality
+ggplot(data = GA.district.data.13,aes(x = FEDRSPEC)) + geom_histogram(aes(group=GNETS,fill=as.factor(GNETS)),position='dodge')+
+  ylab('Frequency') + xlab('Federal Funding - Children with Disabilities') +
+  scale_fill_discrete('',labels=c('Non-GNETS','GNETS')) + 
+  scale_x_continuous(expand=c(0,0)) + 
+  scale_y_continuous(expand=c(0,0)) + 
+  theme_bw() + theme(legend.position=c(.8,.40))
+
+ggplot(data = GA.district.data.13,aes(x = STRSPEC)) + geom_histogram(aes(group=GNETS,fill=as.factor(GNETS)),position='dodge')+
+  ylab('Frequency') + xlab('State Funding - Special Education Programs') +
+  scale_fill_discrete('',labels=c('Non-GNETS','GNETS')) + 
+  scale_x_continuous(expand=c(0,0)) + 
+  scale_y_continuous(expand=c(0,0)) + 
+  theme_bw() + theme(legend.position=c(.8,.40))
+
+ggplot(data = GA.district.data.13,aes(x = STROTHR)) + geom_histogram(aes(group=GNETS,fill=as.factor(GNETS)),position='dodge')+
+  ylab('Frequency') + xlab('State Funding - All Other State Revenue') +
+  scale_fill_discrete('',labels=c('Non-GNETS','GNETS')) + 
+  scale_x_continuous(expand=c(0,0)) + 
+  scale_y_continuous(expand=c(0,0)) + 
+  theme_bw() + theme(legend.position=c(.8,.40))
+
+ggplot(data = GA.district.data.13,aes(x = LOCROSCH)) + geom_histogram(aes(group=GNETS,fill=as.factor(GNETS)),position='dodge')+
+  ylab('Frequency') + xlab('Local Funding - Revenue From Other School Systems') +
+  scale_fill_discrete('',labels=c('Non-GNETS','GNETS')) + 
+  scale_x_continuous(expand=c(0,0)) + 
+  scale_y_continuous(expand=c(0,0)) + 
+  theme_bw() + theme(legend.position=c(.8,.40))
+```
+
+#### Check Assumptions for T-tests
+
+```{r, echo=FALSE}
+ggplot(GA.district.data.13, aes(x = FEDRSPEC, group = GNETS)) + geom_density(aes(colour = as.factor(GNETS))) + theme_bw() + theme(legend.position = c(0.8,0.3))
+ggplot(GA.district.data.13, aes(x = STRSPEC, group = GNETS)) + geom_density(aes(colour = as.factor(GNETS))) + theme_bw() + theme(legend.position = c(0.8,0.3))
+ggplot(GA.district.data.13, aes(x = STROTHR, group = GNETS)) + geom_density(aes(colour = as.factor(GNETS))) + theme_bw() + theme(legend.position = c(0.8,0.3))
+ggplot(GA.district.data.13, aes(x = LOCROSCH, group = GNETS)) + geom_density(aes(colour = as.factor(GNETS))) + theme_bw() + theme(legend.position = c(0.8,0.3))
+```
+
+#### Comparison of GNETS and Non-GNETS Districts
+
+```{r, echo=FALSE}
+library(tidyr)
+
+boxplot(GNETS$FEDRSPEC,NoGNETS$FEDRSPEC, horizontal=TRUE,
+        names=c("GNETS","Non-GNETS"),
+        col=c("turquoise","tomato"),
+        xlab="Federal Revenue-Children wth Disabilities",
+        main="Comparison of Federal Special Education Revenue")
+
+boxplot(GNETS$STRSPEC,NoGNETS$STRSPEC, horizontal=TRUE,
+        names=c("GNETS","Non-GNETS"),
+        col=c("turquoise","tomato"),
+        xlab="State Revenue-Special Education Programs",
+        main="Comparison of State Special Education Programs Revenue")
+
+boxplot(GNETS$STROTHR,NoGNETS$STROTHR, horizontal=TRUE,
+        names=c("GNETS","Non-GNETS"),
+        col=c("turquoise","tomato"),
+        xlab="State Revenue-Other",
+        main="Comparison of State Other Revenue")
+
+boxplot(GNETS$LOCROSCH,NoGNETS$LOCROSCH, horizontal=TRUE,
+        names=c("GNETS","Non-GNETS"),
+        col=c("turquoise","tomato"),
+        xlab="Local Revenue-Revenue from Other School Systems",
+        main="Comparison of Local Revenue from Other School Systems")
+```
+
+
+#### 2015  Georgia Network for Educational and Therapeutic Supports (GNETS) Unofficial Directory 
+
+__Burwell Program__ (Office), 307 Fort Drive, LaGrange, GA  30240
+
+* Districts Served:  Carroll, Coweta, Heard, Meriwether, __Troup__, Carrollton City
+* Fiscal Agent:  West Georgia RESA, 99 Brown School Dr., Grantville, GA 30220    
+* Facilities:
+
+1. Burwell Psychoeducational Center, 423 Alabama St., Carrollton, GA  30117  
+
+
+
+
+__Cedarwood Program__ (Office), 400 Donnie Simmons Way, Statesboro, GA  30458
+
+* Districts Served: __Appling__, Jeff Davis, Wayne, Vidalia City, __Toombs__, Tattnall, __Bulloch__, Candler, Evans
+* Fiscal Agent: First District RESA, 201 W Lee St., Brooklet, GA 30415	
+* Facilities: 
+
+1. Baxley (School), 98 Barnes St., Baxley, GA  31513
+2. Lyons  (School), 199 Collins Rd., Lyons, GA  30436
+3. Statesboro (School), 400 Donnie Simmons Way, Statesboro, GA  30458
+
+
+
+
+__Coastal Academy__(Office), 3734 Ross Road, Brunswick, GA  31520
+
+* Districts Served: __Glynn__, McIntosh, __Liberty__, Long, Bryan, __Camden__
+* Fiscal Agent: First District RESA, 201 W Lee St., Brooklet, GA 30415
+* Facilities: 
+
+1. Brunswick (School), 3734 Ross Road, Brunswick, GA  31520
+2. Hinesville (School), 100 Dean St., Hinesville, GA  31313
+3. Camden (School), 311 East St., Kingsland, GA  31548
+
+
+
+
+__Coastal  Georgia Comprehensive Academy__(Office), 2001 Cynthia St., Savannah, GA  31415
+
+* Districts  Served: __Savannah-Chatham__, Effingham
+* Fiscal Agent: Savannah - Chatham County Public School System, 208 Bull Street, Savannah, GA 31401
+* Facilities:
+
+1. Coastal Georgia Comprehensive Academy (Center), 2001 Cynthia Street, Savannah, GA  31415
+
+
+
+
+__DeKalb-Rockdale Program__ (Office), 5931 Shadow Rock Drive, Lithonia, GA  30058
+
+* Districts  Served: __DeKalb__, Rockdale, Decatur City
+* Fiscal Agent: DeKalb County School District, 1701 Mountain Industrial Blvd., Stone Mountain, GA  30083
+* Facilities: 
+
+1. Eagle Woods Academy (Center), 5931 Shadow Rock Drive, Lithonia, GA  30058
+
+
+
+__Elam Alexander Academy___(Office), 2051 2nd St., Macon, GA  31201
+
+* Districts  Served: __Bibb__, Crawford, Jones, Monroe, Peach, Twiggs, __Houston__
+* Fiscal Agent: Bibb County School District, 484 Mulberry Street, Macon, GA  31201
+* Facilities: 
+
+1. Elam Alexander Academy – Burke Campus (School), 2051 2nd St., Macon, GA  31201
+2. Elam Alexander Academy – Northeast High School Campus (School), 1646 Upper River Road, Macon, GA  31211
+3. Elam Alexander Academy – Elberta Center (Center), 400 Elberta Road, Warner Robbins, GA  31093
+
+
+
+__Flint Area Learning Program__ (Office), P.O. Box 729, Cordele, GA  31010
+
+* Districts  Served: __Crisp__, Dooley, Macon, Marion, Schley, Sumter, Taylor, Webster
+* Fiscal Agent: Crisp County School District, P.O.Box 729, Cordele, GA  31010
+* Facilities: 
+
+1. Flint Area Psychoeducational Program (Segregated Program on campus of Crisp County High School), 2402 Cougar Alley, Cordele, GA  31015	
+
+
+
+__FUTURES__ (Office prior to 2015), P.O. Box 2459, Gainesville, GA  30053
+
+* Districts  Served: Habersham, Banks, Stephens, Franklin, Hart, Hall, __Gainesville City__, White, Lumpkin, Rabun, White, Towns, Union, Dawson, Stephens
+* Fiscal Agent: Pioneer RESA,, 1342 GA-254, Cleveland, GA 30528
+* Facilities: 
+
+1. FUTURES-Alpine Center, 715 Woods Mill Road, Gainesville, GA  30053
+
+
+
+__Harrell Learning Center__, 1215 Bailey St., Suite C, Waycross, GA  31501
+
+* Districts  Served: Atkinson, Bacon, Brantley, Charlton, Clinch, Coffee, Pierce, __Ware__
+* Fiscal Agent: Okenfenokee RESA, 1450 N Augusta Ave., Waycross, GA 31503
+* Facilities: 
+
+1. Harrell Learning Center (Center), 1215 Bailey St., Waycross, GA  31501
+
+
+
+__H.A.V.E.N. Academy__, 1595 Hawthorne Ave., Smryna, GA  30080
+
+* Districts  Served: __Cobb__, Marietta City, Douglas
+*Fiscal Agent: Cobb County School District, 514 Glover St., Marietta, GA  30060
+* Facilities: 
+
+1. Hawthorne Center (Center), 1595 Hawthorne Ave., Smryna, GA  30080
+2. Fitzhugh Lee Center (Center), 4400 West Atlanta Rd SE, Smyrna, GA 30080
+3. Chalker Elementary School, 325 North Booth Road, Kennesaw, GA 30144
+4. Due West Elementary School, 3900 Due West Road, Marietta, GA 30064
+5. Russell Elementary School, 3920 South Hurt Road, Smyrna, GA 30082
+6. Garrett Middle School, 5235 Austell-Powder Springs Road, Austell, GA 30103
+7. Palmer Middle School, 690 North Booth Road, Kennesaw, GA 30144
+8. Kell High School, 4770 Lee Waters Road, Marietta, GA 30066
+9. Lassiter High School, 2601 Shallowford Road, Marietta, GA 30066
+10. Osborne High School, 2451 Favor Road,Marietta, GA 30060
+11. Sprayberry High School, 2525 Sandy Plains Road, Marietta, GA 30066
+12. Belmont Hills Elementary School, 605 Glendale Place, Smyrna, GA 30080
+
+
+
+__Heartland Academy__, P.O. Box 296, Mt. Vernon, GA  30445
+
+* Districts  Served: Bleckley, Dodge, Laurens, __Montgomery__, Pulaski, Telfair, Treutlen, Wheeler, Wilcox, Dublin City
+*Fiscal Agent: Heart of Georgia RESA, P.O. Box 296, Mt. Vernon, GA  30445
+* Facilities: 
+
+1. Heartland Academy (Center-like due to separate building  on Montgomery Elementary School campus), 900 M.L. King Drive, Ailey, GA   30410 
+
+
+
+__Horizon Academy__, 1500 Lankford Dr., Valdosta, GA  31601
+
+* Districts  Served: Brooks, Echols, __Lowndes__, Valdosta City, __Berrien__, Cook, Lanier, Ben Hill, Irwin, __Tift__, Turner 
+* Fiscal Agent: Lowndes County School District, 1592 Norman Dr., Valdosta, GA  31601
+* Facilities: 
+
+1. Horizon Academy Lowndes Site (Center), 1500-A Lankford Drive, Valdosta, GA 31601
+2. Horizon Academy Berrien Site (Center), 509 Chism Ave., Nashville, Ga 31639
+3. Horizon Academy Tifton Site (Center), 1518 ½ Chestnut Avenue, Tifton, GA 31794
+
+
+
+__Mainstay Academy__, 200 A.Z. Kelsey Dr., Griffin, GA  30223
+
+* Districts Served: Butts, Fayette, __Henry__, Lamar, Newton, Pike, __Spalding__, Upson
+* Fiscal Agent: Griffin-Spalding School District, 216 S. 6th St., Griffin, GA  30224
+* Facilities: 
+
+1. Mainstay Academy, 200 A.Z. Kelsey Dr., Griffin, GA  30223
+2. Mainstay Academy, 330 Tomlinson St., McDonough, GA 30253
+
+
+
+__North Metro Program__, 601 Beckwith St. SW, Atlanta, GA  30314
+
+* Districts Served: __Atlanta Public Schools__, __Gwinnett__, __Fulton__
+* Fiscal Agent: Metro RESA, 601 Beckwith St. SW, Atlanta, GA  30314
+* Facilities: 
+
+1. North Metro/Oglethorpe (Center), 601 Beckwith St. SW, Atlanta, GA 30314
+2. Oakland Meadow School, 590 Old Snellville Hwy., Lawrenceville, GA 30046 
+3. Hooper Renwick School, 56 Neal Blvd., Lawrenceville, GA 30046
+4. Sweet Apple Elementary School, 12025 Etris Road, Roswell, GA 30075
+5. New Prospect Elementary School, 3055 Kimball Bridge Road, Alpharetta, GA 30022
+6. Haynes Bridge Middle School, 10665 Haynes Bridge Road, Alpharetta, GA 30022
+7. Elkins Pointe Middle School, 11290 Elkins Road, Roswell, GA 30076
+8. Centennial High School, 9310 Scott Road, Roswell, GA 30076
+9. Independence High School, 86 School Drive, Alpharetta, GA 30009
+
+
+
+__North Star Educational and Therapeutic Services__, 121 D.B. Carroll St., Jasper, GA  30143
+
+* Districts Served: Fannin, Gilmer, Murray, __Pickens__, Whitfield, Dalton City
+* Fiscal Agent: North GA RESA, 4731 Old Highway 5 South, Elijay, GA 30540	
+* Facilities: 
+
+1. North Star GNETS (Center), 121 D.B. Carroll Street, Jasper, GA 30143 
+
+
+
+__Northwest Georgia Educational Program__, P.O. Box 1585, Rome,  GA  30162
+
+* Districts Served: Bartow, Catoosa, Chattooga, Dade, Floyd, Gordon,  Haralson, Paulding, Polk, Walker, Bremen City, Calhoun City, Cartersville City, Chickamauga City, __Rome City__, Trion City
+* Fiscal Agent: Northwest GA RESA, 3167 Cedartown Hwy SE, Rome, GA 30161
+* Facilities: 
+
+1. Northwest GNETS (Center), 301 Nixon Avenue, Rome, GA  30161	
+
+
+
+__Oak Tree Program__, 1520 Cordell Ave., Albany, GA  31705
+
+* Districts Served: Baker, Calhoun, __Dougherty__, Early, Lee, Miller, Terrell, Worth
+* Fiscal Agent: Dougherty County School District, 200 Pine Ave., Albany, GA  31701
+* Facilities: 
+
+1. Oak Tree Psychoeducational Center (Center), 1520 Cordell Ave., Albany, GA  31705
+
+
+
+__GNETS of Oconee__, P.O. Drawer 1830, Milledgeville, GA  31059-1830
+
+* Districts Served: __Baldwin__, Hancock, Jasper, Putnam, Washington, Wilkinson, __Johnson__
+* Fiscal Agent:Oconee RESA, 206 S Main St., Tennille, GA 31089	
+* Facilities: 
+
+1. GNETS of Oconee (Center), 1300 Orchard Hill Road, Milledgeville, GA  31059
+2. Baldwin County Board of Education Early Learning Center, 100 N. ABC St., Milledgeville, GA  31061
+3. Johnson County Middle/High School, 150 Trojan Way, Wrightsville, GA 31096
+
+
+
+__Pathways Educational Program__ (Office), 208 N. Pinetree Blvd., Thomasville, GA  31792	
+
+* Districts Served: __Colquitt__, Mitchell, Pelham City, __Decatur__, __Thomas__, Thomasville City, Grady, Seminole
+* Fiscal Agent: Thomas County School District, 200 N. Pinetree Blvd., Thomasville, GA 31792	
+* Facilities: 
+
+1. Pathways Colquitt Center (Center), Vereen School, 60 Greenwood Ave., Moultrie, GA  31768
+2. Pathways Decatur Center (Center), 507 Martin St., Bainbridge, GA  39817
+3. Pathways Thomas Center (Center), 208 N Pinetree Blvd., Thomasville, GA 31792
+
+
+
+__River Quest Program__, 220 Jefferson Street, Swainsboro, GA  30401
+
+* Districts Served: __Burke__, Emanuel, Glascock, Jefferson, Jenkins, Screven
+* Fiscal Agent: Central Savannah River RESA, 4683 Augusta Hwy., Dearing, GA 30808	
+* Facilities: 
+
+1. River Quest Program (Center), 234 Harris St., Midville, Georgia 30441	
+
+
+
+__Rutland Academy__, 1250 Oglethorpe Ave., Athens, GA 30606
+
+* Districts Served: Barrow, __Clarke__, Elbert, Greene, Jackson, Madison,, Morgan, Oconee, Oglethorpe, Walton, Commerce City, Jefferson City, Social Circle City
+* Fiscal Agent: Northeast Georgia RESA, 375 Winter Street, Winterville, Georgia 30683	
+* Facilities: 
+
+1. Rutland Academy (Center), 1250 Oglethorpe Ave., Athens, GA 30606	
+
+
+
+__Sand Hills Program__, 3110 Tate Rd., Suite B, Augusta, GA  30906	
+
+* Districts Served: __Richmond__, Lincoln, __McDuffie__, Taliaferro, Warren, Wilkes
+* Fiscal Agent: Richmond County School System, 864 Broad Street, Augusta, Georgia  30901
+* Facilities: 
+
+1. Terrace Manor Elementary, 3110 Tate Rd., Augusta, GA  30906
+2. Glenn Hills Middle School, 2941 Glenn Hills Drive, Augusta, GA 30906
+3. TW Josey High School, 1701 Fifteenth Street, Augusta, GA 30901
+4. Westside High School, 1002 Patriot's Way, Augusta, GA 30907
+5. Old” Norris Elementary (Center), 614 Martin Luther King, Jr. St., Thomson, GA 30824	
+
+
+
+__South Metro Program__, 5277 Ash Street, Forest Park, GA  30297	
+
+* Districts Served: Atlanta Public Schools, Fulton (South), __Clayton__
+* Fiscal Agent: Clayton County School District, 1058 Fifth Ave., Jonesboro, GA 30236
+* Facilities: 
+
+1. Ash Street Center (Center), 5277 Ash Street, Forest Park, GA  30297	
+
+
+
+__Woodall Program__, 4312 Harrison Ave., Columbus, GA  31904
+
+* Districts Served: Chattahoochee, Clay, Harris, __Muscogee__, Quitman, Randolph, Stewart, Talbot
+* Fiscal Agent: Muscogee County School District, 2960 Macon Rd., Columbus, Georgia  31906	
+* Facilities: 
+
+1. Woodall Center (Center), 4312 Harrison Ave., Columbus, GA  31904
+
+#### Websites Used to Construct the GNETS Directory
+
+* http://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=130001102656  
+* http://www.cedarwoodgnets.org/schools  
+* http://www.cedarwoodgnets.org/schools/baxley 
+* http://www.cedarwoodgnets.org/schools/lyons 
+* http://www.cedarwoodgnets.org/schools/claxton 
+* http://www.coastalacademygnets.com/Sites 
+* http://www.coastalacademygnets.com/Sites/brunswick 
+* http://www.coastalacademygnets.com/Sites/hinesville 
+* http://www.coastalacademygnets.com/Sites/camden 
+* http://internet.savannah.chatham.k12.ga.us/schools/Pages/Schools.aspx 
+* http://internet.savannah.chatham.k12.ga.us/schools/CGCA/default.aspx 
+* http://www.dekalb.k12.ga.us/schools-and-centers 
+* http://www.bibb.k12.ga.us/domain/1163  
+* http://www.bibb.k12.ga.us/cms/lib01/GA01000598/Centricity/Domain/76/SchoolSupply13_ElamNortheast.pdf
+* http://www.bibb.k12.ga.us/Page/7017  
+* http://www.justice.gov/sites/default/files/crt/legacy/2015/07/15/gnetslof.pdf p. 9
+* https://sites.google.com/a/pioneerresa.org/thefuturesprogram/
+* https://sites.google.com/a/pioneerresa.org/thefuturesprogram/Locations 
+* http://www.nowhabersham.com/old-cornelia-school-to-become-new-futures-site/
+* http://mossy-creek.white.k12.ga.us/ 
+* http://www.ciclt.net/sn/adm/editpage.aspx?ClientCode=okresa&FileName=Services_Harrell_LC 
+* http://www.cobbk12.org/haven/about_index.htm 
+* http://www.justice.gov/sites/default/files/crt/legacy/2015/07/15/gnetslof.pdf p. 16
+* http://montgomery.ga.mce.schoolinsites.com/?PageName=%27Contact%27 
+* http://ha.lowndes.k12.ga.us/home  
+* http://www.spalding.k12.ga.us/pages/GSCS_District-Central/Schools/GSCS_Schools_Contact_Informati/Mainstay_Academy 
+* http://schoolwires.henry.k12.ga.us/Page/9450 
+* https://sites.google.com/site/northmetrognets/people  
+* http://www.ngresa.org/index.html 
+* http://www.mymec.org/sites/pickens 
+* http://nwgaresa.com/  
+* http://nwgaresa.com/gnets/  
+* http://www.docoschools.org/Schools/tabid/60214/Default.aspx 
+* http://www.ciclt.net/sn/clt/oconee/default.aspx?ClientCode=oconee 
+* http://gnetsofoconee.org/ 
+* http://elc4.baldwin.schooldesk.net/ ; http://www.georgiaheadstart.org/programs/programs.php?pid=49  
+* http://www.johnson.k12.ga.us/system/schools.htm 
+* http://www.thomas.k12.ga.us/Schools 
+* http://www.thomas.k12.ga.us/content_page2.aspx?schoolid=7&cid=20 
+* http://www.thomas.k12.ga.us/7/Content2/28 
+* http://www.thomas.k12.ga.us/7/Content2/38 
+* http://www.csraresa.net/contact-us/ 
+* http://www.negaresa.org/negaresa/?page_id=550  
+* http://www.rcboe.org/sandhills ; http://rcboe.schoolwires.net/Page/15685 
+* https://www.clayton.k12.ga.us/facilities/otherdistrictfacilities/009.asp
+* http://clayton.009.schooldesk.net/  
+* http://www.clayton.k12.ga.us/ 
+* https://www.muscogee.k12.ga.us/Schools/Pages/WoodallCenter.aspx 
+
+
+
+
+
+
+
+
+
+
