@@ -77,36 +77,9 @@ img {
 ## 
 ## The following objects are masked from 'package:base':
 ## 
-##     intersect, setdiff, setequal, union</code></pre>
-<pre><code>##                             NAME ENROLL TOTALREV TFEDREV FEDRSPEC FEDROTHR
-## 1 AUTAUGA COUNTY SCHOOL DISTRICT   9717    79651    7259     2015     1251
-## 2 BALDWIN COUNTY SCHOOL DISTRICT  29419   294249   22266     5599     3364
-## 3 BARBOUR COUNTY SCHOOL DISTRICT   1061    10444    2650      316      327
-## 4   EUFAULA CITY SCHOOL DISTRICT   2805    24320    3588      570      562
-## 5    BIBB COUNTY SCHOOL DISTRICT   3475    31799    3909      855      574
-## 6  BLOUNT COUNTY SCHOOL DISTRICT   8341    67328    6812     1747      697
-##   TSTREV STRFORM STRSPEC STROTHR TLOCREV LOCRPROP LOCROSCH LOCROTHR
-## 1  51182   43310       0    3659   21210     6523        0     5313
-## 2 122616  104763       0    9725  149367    43607       15    11981
-## 3   5850    4428       0     680    1944      930        0      250
-## 4  14592   12369       0    1804    6140     2728        0      486
-## 5  21660   17959       0    2029    6230     1508        1      796
-## 6  47058   39465       0    3825   13458     3632        0     2061
-##   TOTALEXP TCURINST TCURSSVC TCURSPUP PCTTOTAL PCTFTOT PCTSTOT PCTLTOT
-## 1    77028    42480    21483     3279      100     9.1    64.3    26.6
-## 2   264079   139820    85770    13267      100     7.6    41.7    50.8
-## 3    10628     5318     3858      534      100    25.4    56.0    18.6
-## 4    24630    13974     7149     1243      100    14.8    60.0    25.2
-## 5    30276    16113     9405     1504      100    12.3    68.1    19.6
-## 6    65016    36785    21422     2580      100    10.1    69.9    20.0
-##   PCTLOTHG PPCSTOT PPITOTAL PPSTOTAL PPSPUPIL
-## 1      7.1    7181     4372     2211      337
-## 2     27.5    8100     4751     2915      451
-## 3      5.2    9530     5012     3636      503
-## 4      7.9    8171     4982     2549      443
-## 5      6.9    7946     4538     2706      433
-## 6      5.6    7498     4410     2568      309</code></pre>
-<pre><code>## Loading required package: boot
+##     intersect, setdiff, setequal, union
+## 
+## Loading required package: boot
 ## 
 ## Attaching package: 'pastecs'
 ## 
@@ -115,15 +88,19 @@ img {
 ##     first, last</code></pre>
 <div id="abstract" class="section level2">
 <h2>Abstract</h2>
-<p>: a short, one paragraph explanation of your project. The abstract should not consist of more than 5 or 6 sentences, but should relate what you studied and what you found. It need only convey a general sense of what you actually did. The purpose of the abstract is to give a prospective reader enough information to decide if they want to read the full paper.</p>
 </div>
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
-<p>: an overview of your project. In a few paragraphs, you should explain clearly} and precisely} what your research question is, why it is interesting, and what contribution you have made towards answering that question. You should give an overview of the specifics of your model, but not the full details. Most readers never make it past the introduction, so this is your chance to hook the reader, and is in many ways the most important part of the paper.</p>
+<p>The Georgia Network for Educational and Therapeutic Supports (GNETS) is comprised of 24 programs that support the local school districts’ continuum of services for students with disabilities, ages 3-21. The programs provide comprehensive educational and therapeutic support services to students who might otherwise require residential or other more restrictive placements due to the severity of their behaviors.</p>
+<p>On July 15, 2015, the U.S. Department of Justice’s Office of Civil Rights (DOJ-OCR) issued a Letter of Findings (LOF) to the current Georgia Governor, Nathan Deal, informing him of the State of Georgia’s violation of Title II of the ADA which establishes that individuals with mental health disabilities have rights to “integrated settings” in which to receieve public education.</p>
+<p>The LOF stated that the State of Georgia was illegally discriminating against students solely on the basis of their disability and was also practicing disability-based segregation in the continuous funding and operation of the Georgia Network for Educational and Therapeutic Supports (GNETS) regional special education programs. Stand-alone, center-based GNETS programs do not afford students with behavioral disabilities an “integrated setting.” An “integrated setting” in this context means that students are to be educated the public school in their home attendance zone (i.e. their home school). A 2010 Georgia Department of Audits and Accounts (DOAA) GNETS Performance Audit provided much of the evidence for the foundation of the DOJ Letter of Findings and which supported the discrimination and segregation claims.</p>
+<p>In trying to better understand Georgia’s continued operatation of GNETS programs, a logical starting point for analysis would be school system finances. Our research question is as follows:</p>
+<p><strong>Do school districts with GNETS schools and programs receive more money from the state?</strong></p>
+<p>The answer to this question can indicate the possibility of financial incentives that “reward” school districts that operate and/or administer GNETS programs within their districts.</p>
+<p><strong>Scope</strong> This research is intended to be an initial exploratory analysis of special education funding streams to ascertain whether financial disparities exist between Local Educational Agencies (LEAs) that have the GNETS schools within their boundaries and those that do not.</p>
 </div>
 <div id="data" class="section level2">
 <h2>Data</h2>
-<p>: a brief description of your data set. What variables are included? Where did they come from? What are units of measurement? What is the population that was sampled? How was the sample collected? You should also include some basic univariate analysis.</p>
 <p>This research uses the Individual Unit Table from the Federal,State and Local Governments, Public Elementary-Secondary Education Finance Data from 2013. The 2013 Individual Unit Table contain data for selected revenue, expenditure, and debt data items for all school systems collected as part of the 2013 Annual Survey of School System Finances authorized by law under Title 13, United States Code, Section 161 and 162. All amounts except for fall membership are expressed in thousands of dollars. Fall membership data are expressed in whole amounts and represent the FTE count in October of the 2013-2014 school year. The data file may be downloaded from the Census Bureau’s website at <a href="http://www.census.gov/govs/school/" class="uri">http://www.census.gov/govs/school/</a>.</p>
 <p>The units of analysis are the 196 Local Education Agencies (LEAs) within Georgia. Of the 196 LEAs, 24 function as fiscal agents for the GNETS programs. The GNETS programs can include segregated stand-alone centers/sites only serving special education students as well as segregated/minimally integrated classroom programs located at specific local public schools. For the purposes of this study, center-based refers to stand-alone GNETS sites while school-based refers to classroom GNETS programs.</p>
 <p>Students eligible for GNETS programs are special education students as defined by the Indiviuals with Disiabilities in Education Act (IDEA). GNETS students have disabilities that impede their learning and/or the learning of others to the extent that they require an Individualized Education Plan (IEP) in order to access the General Education curriculum and receive educational benefit. IEPs must satisfy the legal requirement of a Free and Appropriate Public Education (FAPE) in the Least Restrictive Environment (LRE). Students protected under IDEA are also protected under the Americans with Disabilities Act with the ADA definition of disability as a condition that “limits one or more major life activities, a person who has a history or record of such an impairment, or a person who is perceived by others as having such an impairment” (U.S. Department of Justice).</p>
@@ -143,7 +120,7 @@ img {
 <li>Having a functioning website, and</li>
 <li>a verifiable and active physical address using Google Maps Street View.</li>
 </ol>
-<p>This data was used to construct a list of the GNETS programs which was then used as the basis for coding all 196 observations after the creation of a GNETS dummy variable (GNETS; 0 = the absence of a GNETS program, 1 = presence of a GNETS program). The information used to construct this variable is included in the Appendix as a table.</p>
+<p>This data was used to construct a comprehensive list of the GNETS programs which was then used as the basis for coding all 196 observations after the creation of a GNETS dummy variable (GNETS; 0 = the absence of a GNETS program, 1 = presence of a GNETS program). The information used to construct this variable is included in the Appendix as a table.</p>
 <pre><code>## 
 ## Attaching package: 'magrittr'
 ## 
@@ -236,7 +213,7 @@ img {
 <div id="methodology" class="section level2">
 <h2>Methodology</h2>
 <p>I will investigate the whether school districts with Georgia Network for Educational and Therapeutic Supports center-based or school-based programs recieve more money from the state of Georgia.</p>
-<p>Yearly FTE counts of students served in the GNETS programs after 2010 are not publicly available, hence the use of estimated counts based on budget data available on federal websites listed in the Data section. I will attempt to discern approximate costs per student using the DOAA GNETS Performance Audit budget baseline by incorporating NPV and inflation.</p>
+<p>Yearly FTE counts of students served in the GNETS programs are not publicly available, hence the use of estimated counts based on budget data available on federal websites listed in the Data section. I will attempt to discern approximate costs per student using the DOAA GNETS Performance Audit budget baseline by incorporating NPV and inflation.</p>
 </div>
 <div id="results" class="section level2">
 <h2>Results</h2>
@@ -575,8 +552,8 @@ img {
 <li>Woodall Center (Center), 4312 Harrison Ave., Columbus, GA 31904</li>
 </ol>
 </div>
-<div id="websites" class="section level4">
-<h4>Websites</h4>
+<div id="websites-used-to-construct-the-gnets-directory" class="section level4">
+<h4>Websites Used to Construct the GNETS Directory</h4>
 <ul>
 <li><a href="http://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=130001102656" class="uri">http://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=130001102656</a><br /></li>
 <li><a href="http://www.cedarwoodgnets.org/schools" class="uri">http://www.cedarwoodgnets.org/schools</a><br /></li>
